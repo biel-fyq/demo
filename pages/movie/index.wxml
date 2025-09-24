@@ -1,0 +1,58 @@
+<view class="movie-body">
+  <view class="safe-top-spacer"></view>
+  <image src="https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250924/logo_1758704246674.png" alt="" class="movie-logo"/>
+  <view class="moviePillContainer">
+    <text class="movieTitle">电影药丸</text>
+    <image class="pillImage" src="/img/20.png" mode="aspectFit"></image>
+  </view>
+  <!-- 轮播图 -->
+  <view class="poster-container" style="margin-top: -20rpx;">
+    <block wx:for="{{posters}}" wx:key="index">
+      <view class="poster-item {{currentIndex === index ? 'active' : ''}}" bindtap="handlePosterTap" data-index="{{index}}" style="z-index: {{getZIndex(index)}}">
+        <image src="{{item.src}}" mode="aspectFill" class="poster-image"></image>
+
+        <!-- 播放按钮 -->
+        <view wx:if="{{currentIndex === index}}" class="center-play-btn" bindtap="playVideo">
+          <image src="/img/Vector.png" class="play-icon"></image>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <view class="movie-text-body">
+    <view>我在时间尽头等你</view>
+    <view class="movie-text-sub">回忆是一种很奇妙的东西，它生活在过去，存在于现在，却能影响未来。</view>
+  </view>
+
+    <view class="moviePillContainer">
+      <text class="movieTitle">读本好书</text>
+      <image class="pillImage" src="/img/20.png" mode="aspectFit"></image>
+    </view>
+  <view class="books-row" style="margin-top: -80rpx;">
+    <block wx:for="{{bookimgs}}" wx:key="index">
+      <image class="book-image" src="{{item}}" mode="aspectFit" bindtap="showBookModal" data-index="{{index}}"/>
+    </block>
+  </view>
+
+  <view class="moviePillContainer">
+    <text class="movieTitle">品品语录</text>
+    <image class="pillImage" src="/img/20.png" mode="aspectFit"></image>
+  </view>
+    <image class="book" src="https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250924/Frame 1321314862_1758704169660.png" mode="aspectFit"></image>
+</view>
+
+<!-- 书籍弹框 -->
+<view wx:if="{{showBookModal}}" class="book-modal-mask" bindtap="hideBookModal">
+  <view class="book-modal" catchtap="">
+    <!-- 书籍封面 -->
+    <image class="book-modal-cover" src="/img/31.png" mode="aspectFit"></image>
+    
+    <!-- 书籍信息 -->
+    <view class="book-modal-content">
+      <view class="book-modal-description">{{selectedBook.description}}</view>
+    </view>
+    
+    <!-- 确认按钮 -->
+    <button class="book-modal-btn" bindtap="goToRead">去阅读</button>
+  </view>
+</view>

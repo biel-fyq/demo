@@ -1,0 +1,9 @@
+<view class="feedback-page">
+    <view class="content">
+        <text class="label">写下您的意见</text>
+        <view class="input-card">
+            <textarea class="textarea" placeholder="请输入内容" placeholder-class="ph" maxlength="300" bindinput="onInput" />
+        </view>
+        <button class="confirm-btn" bindtap="onSubmit">确定</button>
+    </view>
+</view>

@@ -1,0 +1,237 @@
+.my-body {
+	width: 100vw;
+	height: 100vh;
+	background-image: url('https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250922/2165d0b79a51b39d0e9847cb20859dc85814f8fb_1758541342328.jpg');
+	background-size: cover;  
+	background-position: center;
+	position: relative;
+}
+
+/* 渐变模糊遮罩层 */
+.my-body::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	/* background: linear-gradient(to top, 
+		white 15%,
+		white 10%,
+		transparent 80%
+  ); */
+  background: linear-gradient(180deg, rgba(248, 248, 248, 0) -2.38%, rgba(248, 248, 248, 0.8) 39.29%, rgba(248, 248, 248, 0.85) 43.63%, rgba(248, 248, 248, 0.9) 47.97%, rgba(248, 248, 248, 0.95) 65.31%, #F8F8F8 100%);
+	z-index: 1;
+}
+
+/* 确保内容在遮罩层之上 */
+.my-body > view {
+	position: relative;
+	z-index: 2;
+}
+
+/* Logo 定位到顶部 */
+.my-logo {
+	position: fixed;
+	top: calc(80rpx + env(safe-area-inset-top));
+	left: 12%;
+	transform: translateX(-50%);
+	z-index: 9999;
+	width: 162rpx;
+	height: 64rpx;
+}
+
+/* 顶部背景 + 底部徽章 */
+.hero {
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+    height: calc(100vw + constant(safe-area-inset-top));
+    height: calc(100vw + env(safe-area-inset-top));
+    overflow: visible;
+}
+
+.hero-bg {
+    position: absolute;
+    left: 0; right: 0; top: 0;
+    width: 100%;
+    height: calc(100% + 0vw);
+		object-fit: cover;
+		transform: scale(1.);
+}
+
+/* 背景图上垂直（且水平）居中的头像 */
+.hero-avatar {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 128rpx;
+	height: 128rpx;
+	border-radius: 50%;
+	/* border: 6rpx solid #fff; */
+	box-shadow: 0 8rpx 24rpx rgba(0,0,0,0.15);
+	z-index: 2;
+}
+
+.hero-badge {
+	position: absolute;
+	left: 50%;
+	bottom: 0rpx;
+	transform: translateX(-50%);
+	width: 95vw;
+	height: auto;
+}
+
+.meritorious-service {
+	position: absolute;
+	left: calc(50% - 46vw); /* 95vw 的一半再留少许内边距 */
+	bottom: 250rpx; /* 略高于徽章底部 */
+	width: 156rpx;
+	height: 76rpx;
+	z-index: 2;
+}
+
+.badge-avatars {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	/* 放在徽章正上方一点 */
+	bottom: 50rpx;
+	display: flex;
+  gap: 150rpx;
+  border: 1px solid;
+  border-image-source: linear-gradient(180deg, #FFFFFF 0%, #D7CBCB 100%);
+	align-items: center;
+	z-index: 3;
+}
+
+.avatar-item {
+	width: 120rpx;
+	height: 120rpx;
+	border-radius: 50%;
+}
+
+.my-actions {
+	margin-top: 120rpx; /* 预留徽章下探空间 */
+	display: flex;
+	flex-direction: column;
+	gap: 50rpx;
+	align-items: center;
+}
+
+.my-btn {
+	width: 420rpx;
+	height: 96rpx;
+	line-height: 96rpx;
+	border-radius: 56rpx;
+	background: #ffffff;
+	border: 2rpx solid #111;
+	box-shadow: 0 8rpx 20rpx rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  font-weight: 500;
+  color: #000;
+}
+
+/* 弹窗遮罩和容器 */
+.modal-mask {
+	position: fixed;
+	left: 0; right: 0; top: 0; bottom: 0;
+	background: rgba(0,0,0,0.45);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 32rpx;
+	z-index: 9999;
+}
+
+.modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  width: 600rpx;
+  height: 380rpx;
+	overflow: auto;
+	background: #ffffff;
+  border-radius: 28rpx;
+	box-shadow: 0 16rpx 48rpx rgba(0,0,0,0.18);
+}
+
+.modal-title {
+	text-align: center;
+	font-size: 40rpx;
+	font-weight: 400;
+  color: #000;
+  margin-top: 80rpx;
+	
+}
+/* 确保按钮在 Flex 容器中正常显示 */
+.modal-actions {
+	display: flex;
+	justify-content: center; /* 水平居中 */
+	gap: 24rpx; /* 按钮之间的间隔 */
+  /* 可以考虑加一些内边距，确保按钮不会贴到弹窗边缘 */
+  padding: 0 24rpx; 
+  margin-top: 50rpx; /* 如果按钮离标题太近，可以增加顶部外边距 */
+}
+
+.modal-btn {
+	/* 核心宽度控制 */
+	width: 230rpx; /* 你指定的宽度 */
+	height: 88rpx;
+	line-height: 88rpx; /* 确保文字垂直居中 */
+	border-radius: 60rpx;
+	border: 2rpx solid #111; /* 建议将 1rpx 改为 2rpx 以增强可见性，或者保持 1rpx */
+  
+  /* 解决 font-size 重复定义的问题，只保留你想要的值 */
+  font-size: 32rpx; /* 选择你想要的字体大小 */
+  font-weight: 500;
+  color: #000;
+  
+  /* Flex 布局在这里可能不是必须的，因为 line-height 已经可以垂直居中文本 */
+  /* 但如果按钮内部有图标或其他复杂内容，保留 flex 是好的 */
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  
+  /* 移除小程序 button 默认的 after 伪元素边框！！ 这是关键！！ */
+  /* 否则你的自定义 border 和 background 可能被覆盖 */
+  box-sizing: border-box; /* 确保 width 包含 padding 和 border */
+}
+
+/* 覆盖默认的 ::after 边框，非常重要！ */
+.modal-btn::after {
+  border: none !important; /* 加 !important 来确保覆盖 */
+}
+
+/* 按钮点击态（hover 或 active） */
+.modal-btn:active {
+  /* 模拟点击效果，可以自己定义 */
+  transform: scale(0.98); /* 稍微缩小 */
+  opacity: 0.9;            /* 稍微变暗 */
+  transition: transform 0.1s ease, opacity 0.1s ease; /* 平滑过渡 */
+}
+
+/* 具体按钮的背景和边框 */
+.modal-btn.ghost {
+	background: #ffffff;
+	color: #666;
+box-sizing: border-box;
+border: 1px solid #000000;
+border-radius: 40px;
+}
+
+.modal-btn.primary {
+	background: #FFC300;
+  border: 2rpx solid #FFC300; /* primary 按钮的边框可以和背景色一致 */
+	color: #333; /* 根据背景色调整字体颜色，让对比度更高 */
+	border: 1px solid #000000;
+border-radius: 40px;
+}
+
+

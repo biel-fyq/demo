@@ -1,0 +1,65 @@
+<view class="container">
+  <!-- 顶部标题 -->
+  <view class="title">
+    <text>写下ta的名字</text>
+  </view>
+  
+  <!-- 名称输入框 -->
+  <view class="input-item">
+    <input class="custom-input" placeholder="请输入名字" bindinput="inputName" value="{{name}}" />
+    <view class="delete-btn" bindtap="deleteName" wx:if="{{name}}">
+      <image src="/images/delete.png"></image>
+    </view>
+  </view>
+  
+  <!-- 缺点标题 -->
+  <view class="title">
+    <text>写下ta的缺点</text>
+  </view>
+  
+  <!-- 已选择的缺点项 -->
+  <view class="input-item">
+    <input class="custom-input" placeholder="请输入名字" bindinput="inputName" value="{{name}}" />
+    <view class="delete-btn" bindtap="deleteName" wx:if="{{name}}">
+      <image src="/images/delete.png"></image>
+    </view>
+  </view>
+  
+  <!-- <view class="defects-container">
+    <block wx:for="{{defects}}" wx:key="index">
+      <view class="defect-item">
+        
+        <view class="delete-btn" bindtap="deleteDefect" data-index="{{index}}">
+          <image src="/images/delete.png"></image>
+        </view>
+      </view>
+    </block>
+  </view>
+   -->
+  <!-- 添加缺点的输入框 -->
+  <view class="input-item">
+    <input class="custom-input" placeholder="输入ta的一条缺点吧" bindinput="inputNewDefect" value="{{newDefect}}" />
+  </view>
+  <view class="input-item">
+    <input class="custom-input" placeholder="输入ta的一条缺点吧" bindinput="inputNewDefect" value="{{newDefect}}" />
+  </view>
+  <view class="input-item">
+    <input class="custom-input" placeholder="输入ta的一条缺点吧" bindinput="inputNewDefect" value="{{newDefect}}" />
+  </view>
+  
+  <!-- 标签选择区域 - 使用wx:for遍历tagList -->
+  <view class="tag-section">
+    <block wx:for="{{tagList}}" wx:key="*this">
+      <view class="tag-item {{selectedTags.indexOf(item) !== -1 ? 'selected' : ''}}" 
+            bindtap="selectTag" 
+            data-tag="{{item}}">
+        <text>{{item}}</text>
+      </view>
+    </block>
+  </view>
+  
+  <!-- 确定按钮 -->
+  <view class="confirm-btn" bindtap="confirm">
+    <text>确定</text>
+  </view>
+</view>

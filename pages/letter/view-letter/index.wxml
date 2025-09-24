@@ -1,0 +1,37 @@
+<!-- <view class="whisper-container">
+ <view class="frost-tint"></view>
+  <view class="envelope">
+    <view class="message-header">91天后的夏：</view>
+    <view class="time-capsule-message">
+      嘿，你还好吗？\n\n是否依然在生活的浪潮里奔跑，却偶尔忘了为何出发？\n\n希望你已经学会了在忙碌中温柔地停歇，\n看一场日落，读半本闲书，或者只是发呆听风。\n\n那些曾让你焦虑的事，如今是否已化作云淡风轻？\n\n你不必成为他人眼中的光芒，\n\n只需活得真实、自由，像一棵树，生长得从容却坚定。\n\n珍惜眼泪与笑声，它们都是灵魂的语言。\n\n如果累了，就转身看看来时的路——\n每一步，都算数。\n\n现在的我想对你说：\n\n无论你走到了哪一片天空下，\n\n都请继续相信美好，信认真心，信瞬间的悸动，\n信未来仍有许多温柔等你签收。\n\n你永远不是一个人，\n\n因为过去的、现在的、未来的你，\n始终在时间的长河里，默默相依。
+    </view>
+    <view class="action-buttons">
+      <button class="soul-button delete">删除</button>
+      <button class="soul-button rewrite">再写一封</button>
+    </view>
+  </view>
+</view> -->
+
+<view class="whisper-container">
+  <view class="frost-tint"></view>
+  <view class="envelope">
+    <view class="message-header-btn">
+      <button class="soul-button delete">写给21天后的自己</button>
+      <button class="soul-button rewrite">写给91天后的自己</button>
+    </view>
+    <view class="time-capsule-message">
+      <view class="editor-wrap">
+        <textarea class="letter-textarea" value="{{content}}" bindinput="onInput" auto-height="true" maxlength="-1" show-confirm-bar="false" cursor-spacing="24" disable-default-padding="true" />
+        <view class="textarea-placeholder" wx:if="{{!content}}">
+          <view>给未来的自己写一封信吧</view>
+          <view>去将来，</view>
+          <view>遇见更好的自己！</view>
+        </view>
+      </view>
+    </view>
+    <view class="action-buttons">
+      <button class="soul-button delete">印上火漆寄出</button>
+    </view>
+  </view>
+</view>
+

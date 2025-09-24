@@ -1,0 +1,84 @@
+
+  .container {
+    padding: 30rpx;
+  }
+  
+  /* 书籍展示区 */
+  .book-section {
+    display: flex;
+    margin-bottom: 40rpx;
+    background-color: #fff;
+    border-radius: 12rpx;
+    overflow: hidden;
+  }
+  
+  .book-image {
+    width: 200rpx;
+    height: 280rpx;
+  }
+  
+  .book-info {
+    flex: 1;
+    padding: 20rpx;
+    display: flex;
+    margin-left: 20rpx;
+    flex-direction: column;
+  }
+  
+  .book-title {
+    font-size: 36rpx;
+    font-weight: bold;
+    margin-bottom: 10rpx;
+  }
+  
+  .book-author {
+    font-size: 28rpx;
+    color: #000000;
+    margin: 10rpx  0px 10rpx 0rpx;
+  }
+  
+  .book-description {
+    font-size: 26rpx;
+    color: #000;
+    line-height: 1.5;
+  }
+  
+  /* 内容分类区 */
+.content-section {
+  margin-top: 20rpx;
+}
+  
+.content-item {
+  background-color: #fff;
+  border-radius: 24rpx;
+  margin-bottom: 24rpx;
+  padding: 24rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 8rpx 24rpx rgba(0,0,0,0.06);
+}
+  
+.item-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+  
+.item-title {
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #111;
+}
+  
+.item-subtitle {
+  font-size: 26rpx;
+  color: #666;
+  margin-top: 30rpx;
+}
+  
+.item-arrow {
+  width: 48rpx;
+  height: 48rpx;
+  margin-left: 24rpx;
+}

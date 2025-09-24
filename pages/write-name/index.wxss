@@ -1,0 +1,87 @@
+page {
+    background-color: #f7f7f7;
+  }
+  
+  .container {
+    
+    /* padding: 20rpx; */
+  }
+  
+  /* 标题样式 */
+  .title {
+    font-size: 36rpx;
+    color: #b78b5c;
+    margin: 30rpx 0 20rpx;
+    font-weight: normal;
+  }
+  
+  /* 输入框样式 */
+  .input-item {
+    background-color: #ffffff;
+    border-radius: 16rpx;
+    display: flex;
+    align-items: center;
+    padding: 20rpx 30rpx;
+    margin-bottom: 20rpx;
+  }
+  
+  .custom-input {
+    flex: 1;
+    height: 60rpx;
+    font-size: 28rpx;
+  }
+  
+  /* 删除按钮样式 */
+  .delete-btn {
+    width: 50rpx;
+    height: 50rpx;
+    border-radius: 50%;
+    background-color: #cccccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20rpx;
+  }
+  
+  .delete-btn image {
+    width: 30rpx;
+    height: 30rpx;
+  }
+  
+  /* 标签区域样式 */
+  .tag-section {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30rpx;
+  }
+  
+  .tag-item {
+    background-color: #ffffff;
+    border-radius: 30rpx;
+    padding: 16rpx 30rpx;
+    margin: 10rpx;
+    font-size: 26rpx;
+    color: #333333;
+    box-sizing: border-box;
+  }
+  
+  .tag-item.selected {
+    background-color: #f5f5f5;
+    color: #b78b5c;
+  }
+  
+  /* 确定按钮样式 */
+  .confirm-btn {
+    background-color: #ffd700;
+    border-radius: 50rpx;
+    width: 80%;
+    height: 90rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40rpx auto;
+    font-size: 34rpx;
+    font-weight: bold;
+    color: #000000;
+    box-shadow: 0 4rpx 10rpx rgba(255, 215, 0, 0.3);
+  }

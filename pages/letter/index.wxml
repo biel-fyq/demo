@@ -1,0 +1,58 @@
+<view class="container">
+  <view class="safe-top-spacer"></view>
+  <view class="frost-tint"></view>
+  <view>
+    <image src="https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250924/logo_1758704246674.png" alt="" class="letter-logo" />
+
+    <!-- <view>
+            <view class="content">
+                <text class="title">写给91天后 夏～ 的信</text>
+                <view class="time">2025-09-11 15:23 手书</view>
+            </view>
+            <image class="envelope" src="/img/17.png" mode="aspectFit" bindtap="openLetter" />
+        </view> -->
+
+    <view>
+            <view class="content">
+                <text class="title">给未来的自己写一封信吧</text>
+                <view class="title">去将来，</view>
+                <view class="title">更好的你</view>
+            </view>
+            <button class="letter-btn" bindtap="writeLetter">去写信</button>
+        </view>
+
+    <view class="letter-list-button" bindtap="showLetterList">
+      <image class="icon" src="https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250924/19_1758696210339.png" mode="aspectFit" />
+      <text>信件列表</text>
+    </view>
+  </view>
+
+  <view class="seal-popup-container" wx:if="{{sealPopupModal}}" >
+  <view class="seal-popup-mask"></view>
+  <view class="seal-popup-dialog">
+    <view class="seal-popup-content">
+      <text class="seal-popup-message">时间没到，无法拆封</text>
+    </view>
+    <button class="seal-popup-confirm-button" bindtap="onConfirm">确定</button>
+  </view>
+</view>
+
+  <!-- 信件列表弹框 -->
+   <view wx:if="{{showLetterListModal}}" class="letter-list-modal-mask" bindtap="hideLetterList">
+    <view class="letter-list-modal" catchtap="">
+      <view class="letter-list-content">
+        <block wx:for="{{letterList}}" wx:key="index">
+          <view class="letter-card">
+            <image class="letter-card-icon" src="https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250924/5c3250e6392aae345b65ecafaaae94835de1de7c_1758691793874.png"></image>
+            <view class="letter-card-content">
+              <view class="letter-date">{{item.date}}</view>
+              <view class="letter-preview">{{item.preview}}</view>
+            </view>
+            <button class="letter-view-btn" bindtap="viewLetter" data-index="{{index}}">查看</button>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+
+</view>

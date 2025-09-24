@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/home/index",
+    "pages/barrier/index",
+    "pages/letter/index",
+    "pages/letter/view-letter/index",
+    "pages/movie/index",
+    "pages/my/index",
+    "pages/welcome/index",
+    "pages/feedback/index",
+    "pages/reading/index",
+    "pages/catalogue/index",
+    "pages/play-the-video/index",
+    "pages/write-name/index",
+    "pages/wall/index",
+    "pages/kit/index",
+    "pages/rescue/index",
+    "pages/logs/index",
+    "pages/test/index",
+    "pages/index/index"
+  ],
+  "tabBar": {
+    "custom": true,
+    "list": [
+      { "pagePath": "pages/home/index", "text": "新生", "iconPath": "/img/icon/1.png", "selectedIconPath": "/img/icon/1.png" },
+      { "pagePath": "pages/barrier/index", "text": "结界", "iconPath": "/img/icon/2.png", "selectedIconPath": "/img/icon/2.png" },
+      { "pagePath": "pages/letter/index", "text": "信签", "iconPath": "/img/icon/3.png", "selectedIconPath": "/img/icon/3.png" },
+      { "pagePath": "pages/movie/index", "text": "星火", "iconPath": "/img/icon/4.png", "selectedIconPath": "/img/icon/4.png" },
+      { "pagePath": "pages/my/index", "text": "自我", "iconPath": "/img/icon/5.png", "selectedIconPath": "/img/icon/5.png" }
+    ]
+  },
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "",
+    "navigationBarBackgroundColor": "#ffffff"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

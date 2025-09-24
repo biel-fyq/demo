@@ -1,0 +1,24 @@
+<view class="container">
+  <!-- 书籍展示区 -->
+  <view class="book-section">
+    <image class="book-image" src="https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250922/3dc58dd3194288c3a0d4ab40a91b240c55be0915_1758547917576.png" mode="aspectFit"></image>
+    <view class="book-info">
+      <text class="book-title">偶尔向生活请个假</text>
+      <text class="book-author">季羡林</text>
+      <text class="book-description">写的是季羡林的生活，世间万物，百态人生，这个世界都是可爱的。读季羡林的散文，给自己的生活增添一些平静和希望。</text>
+    </view>
+  </view>
+
+  <!-- 内容分类区（遍历） -->
+  <view class="content-section">
+    <block wx:for="{{categories}}" wx:key="title">
+      <view class="content-item" bindtap="navigateToDetail" data-category="{{item.title}}">
+        <view class="item-content">
+          <text class="item-title">{{item.title}}</text>
+          <text class="item-subtitle">{{item.subtitle}}</text>
+        </view>
+        <image class="item-arrow" src="{{item.icon}}"></image>
+      </view>
+    </block>
+  </view>
+</view>

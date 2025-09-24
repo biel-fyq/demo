@@ -1,0 +1,33 @@
+<view class="kit-page">
+    <!-- 背景图 -->
+    <image class="bg" src="https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250922/Overlay_1758530271269.png" mode="aspectFill" />
+    <!-- 磨砂遮罩 -->
+    <view class="bg-mask"></view>
+    <!-- 画布：自适应容器（按宽度等比缩放） -->
+    <view class="canvas">
+        <view class="canvas-inner">
+            <!-- 笔记本背景 -->
+            <image src="https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250922/c85f7c05af8c632ca0ef0382c680c155fe280024_1758530204425.png" class="notebook-bg" mode="widthFix" />
+            <!-- 标题气泡（相对容器用百分比定位） -->
+            <image src="https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250922/Group 1321315008_1758530316687.png" class="title-bubble" mode="widthFix" />
+            <!-- 文字内容（在纸张区域内，用百分比留白） -->
+            <scroll-view class="content-scroll" scroll-y="true">
+                <text class="hit-h1">一、清醒阵痛期：直面现实的撕裂与适应</text>
+                <text class="p">
+                    一、清醒阵痛期：直面现实的撕裂与适应 ——“缓冲 + 锚定” 包
+                    核心情绪特征：从混沌、逃避中清醒，直面问题的沉重（如关系破裂、目标崩塌、自我认知颠覆），伴随强烈的阵痛感、无力感，甚至反复怀疑 “清醒是否更痛苦”。
+                    紧急包建议：
+                    物理缓冲工具
+                    「触感安抚物」：一块磨砂质感的石头、绒毛玩偶、带有熟悉气味的围巾（通过触觉、嗅觉激活安全感记忆）。
+                    「视觉暂停卡」：手写一张卡片，画满简单的线条或贴满治愈系贴纸，写一句 “现在可以先停 10 分钟”，情绪崩溃时盯着卡片深呼吸，切断 “痛苦反刍” 的循环。
+                    「轻量行动道具」：迷你拼图（50 片以内）、捏捏乐减压玩具，用机械性动作转移注意力，避免陷入 “想太多做不到” 的内耗。
+                    心理锚定清单
+                    「微小确幸记录」：提前写下 3 件 “即使现在也能感受到的小美好”（如 “今天的阳光晒在手上很暖”“楼下的猫会蹭我的腿”），阵痛期反复读，提醒自己 “痛苦之外仍有支点”。
+                    「“允许” 宣言」：手写 “允许我暂时做不好”“允许情绪反复”，贴在显眼处，对抗 “必须立刻好起来” 的焦虑。
+                    行动触发项
+                    固定一个 “5 分钟仪式”：比如冲一杯温蜂蜜水，边喝边缓慢踱步，告诉自己 “这 5 分钟，只照顾身体，不想别的”，用身体的稳定带动心理稳定。
+                </text>
+            </scroll-view>
+        </view>
+    </view>
+</view>

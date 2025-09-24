@@ -1,0 +1,313 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250924/f96d447910d359bad237c97e6bc8d527de93feec_1758690547272.png");
+}
+
+.background-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  filter: blur(2px);
+  transform: scale(1.1);
+}
+
+/* ✔️ 信封下移，增大与文字的距离 */
+.envelope {
+
+}
+
+.content {
+  text-align: center;
+  color: #ffffff;
+  z-index: 1;
+  margin-top: 20rpx;
+  /* 可选：微调文字与信封的间距 */
+}
+
+.title {
+  font-size: 40rpx;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: ZCOOL KuaiLe;
+  font-weight: 400;
+  font-style: Regular;
+  line-height: 20px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.time {
+  font-size: 26rpx;
+  margin-top: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  font-style: Regular;
+  line-height: 20px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+
+.letter-list-button {
+  position: absolute;
+  top: 100px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  /* 改为垂直排列 */
+  align-items: center;
+  /* 水平居中（图标和文字整体居中） */
+  color: #ffffff;
+  z-index: 1;
+}
+
+.icon {
+  width: 82rpx;
+  height: 106rpx;
+  margin-bottom: 5rpx;
+  /* 图标与文字的间距 */
+}
+
+.seal-popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+
+.seal-popup-mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.seal-popup-dialog {
+  position: relative;
+  width: 80%;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.seal-popup-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40rpx 20rpx;
+}
+
+.seal-popup-message {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #000;
+  text-align: center;
+  margin-top: 40rpx;
+}
+
+.seal-popup-confirm-button {
+  width: 260rpx !important;
+  height: 100rpx;
+  line-height: 100rpx;
+  margin: 40rpx auto 20rpx;
+  background-color: #ffcc00;
+  color: #000;
+  font-size: 36rpx;
+  font-weight: bold;
+  border-radius: 50rpx;
+  text-align: center;
+  border: 1px solid #000000;
+  padding: 0;
+}
+
+.seal-popup-confirm-button::after {
+  border: none;
+}
+
+.letter-btn {
+  width: 260rpx !important;
+  height: 88rpx;
+  height: 110rpx;
+  background-color: #FFFFFF;
+  border: 1px solid #000000;
+  border-radius: 50rpx;
+  margin-top: 50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  font-weight: 500;
+  color: #000;
+}
+
+/* index.wxss */
+
+page {
+  background-color: #f0f4f8;
+}
+
+.whisper-container {
+  width: 100%;
+  
+}
+
+
+.frost-tint {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+
+.letter-logo {
+  position: fixed;
+	top: calc(80rpx + env(safe-area-inset-top));
+	left: 12%;
+	transform: translateX(-50%);
+	z-index: 9999;
+	width: 162rpx;
+	height: 64rpx;
+}
+
+/* 信件列表弹框样式 */
+.letter-list-modal-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 40rpx;
+}
+
+.letter-list-modal {
+  border-radius: 24rpx;
+  width: 100%;
+  max-width: 600rpx;
+  max-height: 80vh;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.letter-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40rpx 40rpx 20rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.letter-list-title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.close-btn {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.letter-list-content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: visible;
+  padding: 60rpx 0 40rpx;
+  width: 95vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.letter-card {
+  width: 75vw;
+  background: #ffffff;
+  border-radius: 16rpx;
+  margin-bottom: 30rpx;
+  padding: 40rpx 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  /* min-height: 120rpx; */
+}
+
+.letter-card:last-child {
+  margin-bottom: 0;
+}
+
+.letter-card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.letter-date {
+  font-size: 32rpx;
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 12rpx;
+}
+
+.letter-preview {
+  font-size: 28rpx;
+  color: #666;
+  line-height: 2;
+  margin-top: 20rpx;
+}
+
+.letter-view-btn {
+  width: 192rpx !important;
+  height: 66rpx;
+  background: #FFC300;
+  color: #333;
+  border: 2rpx solid #000;
+  font-size: 24rpx;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.letter-view-btn::after {
+  border: none;
+}
+
+.letter-card-icon {
+  position: absolute;
+  top: -40rpx;
+  right: -40rpx;
+  width: 110rpx;
+  height: 110rpx;
+  z-index: 999;
+  transform: rotate(-30deg);
+}

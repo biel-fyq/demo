@@ -1,0 +1,98 @@
+.menu-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 900;
+}
+
+
+.content {
+  width: 100%;
+  height: 124rpx;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.safe-area {
+  height: 0;
+  width: 100%;
+}
+
+.menu-bar-bg {
+  width: 100%;
+  height: 124rpx;
+  display: block;
+  object-fit: cover;
+}
+
+.menu-icons-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  padding: 0 40rpx;
+  text-align: justify;
+  line-height: 124rpx;
+  /* 让图标垂直居中 */
+  font-size: 0;
+  /* 去掉 inline-block 间距 */
+}
+
+.menu-icons-container:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+
+.menu-icon-wrapper {
+  display: inline-block;
+  width: 20%;
+  height: 124rpx;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  margin-top: 20rpx;
+}
+
+.menu-icon {
+  width: 64rpx;
+  height: 64rpx;
+  vertical-align: middle;
+}
+
+.menu-tag {
+  width: 60rpx;
+  height: 48rpx;
+}
+
+.menu-tag-wrapper {
+  position: absolute;
+  top: -10rpx;
+  left: 70%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-tag-text {
+  position: absolute;
+  top: 58%;
+  left: 52%;
+  transform: translate(-50%, -56%);
+  color: #fff;
+  font-size: 20rpx;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.safe-area {
+  height: constant(safe-area-inset-bottom);
+  height: env(safe-area-inset-bottom);
+  width: 100%;
+}

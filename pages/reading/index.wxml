@@ -1,0 +1,27 @@
+<view class="container">
+  <!-- 动态标题 -->
+  <view class="title">{{article.title}}</view>
+
+  <!-- 动态正文 -->
+  <view class="content">
+    <block wx:for="{{article.paragraphs}}" wx:key="index">
+      <text>{{item}}</text>
+    </block>
+  </view>
+
+  <!-- 底部菜单 -->
+  <view class="footer">
+    <view class="menu-item" bindtap="toCatalog">
+      <image class="icon" src="/img/28.png"></image>
+      <text>目录</text>
+    </view>
+    <view class="menu-item" bindtap="prevChapter">
+      <image class="icon" src="/img/29.png"></image>
+      <text>上一章</text>
+    </view>
+    <view class="menu-item" bindtap="nextChapter">
+      <image class="icon" src="/img/30.png"></image>
+      <text>下一章</text>
+    </view>
+  </view>
+</view>

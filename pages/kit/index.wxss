@@ -1,0 +1,122 @@
+.kit-page {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* 背景图 */
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* 磨砂遮罩 */
+.bg-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 2;
+}
+
+/* 自适应画布：按宽度铺满，内部用百分比定位，随比例缩放 */
+.canvas {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
+
+.canvas-inner {
+    position: relative;
+    width: 92vw;            /* 画布宽度占屏宽，统一缩放基准 */
+    aspect-ratio: 9 / 16;   /* 统一比例，避免不同机型拉伸位移 */
+}
+
+/* 笔记本背景：宽度等比缩放，充满画布 */
+.notebook-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 3;
+}
+
+/* 标题气泡：用百分比定位，随容器缩放 */
+.title-bubble {
+    position: absolute;
+    top: 2%;      /* 相对于画布高度的百分比 */
+    right: 15%;
+    width: 62%;    /* 气泡宽度，相对画布 */
+    z-index: 2;
+}
+
+/* 内容区域：用百分比定义位置和大小，适配所有机型 */
+.content-scroll {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 30%;
+    width: 68%;
+    height: 48%;
+    z-index: 3;
+    overflow-y: auto;
+}
+
+.hit-h1 {
+    font-size: 20rpx;
+    font-weight: bold;
+    color: #000;
+}
+
+.p {
+    display: block;
+    font-size: 24rpx;
+    color: #666666;
+}
+
+.h2 {
+    display: block;
+    font-size: 28rpx;
+    font-weight: bold;
+    color: #333333;
+    margin: 20rpx 0 15rpx 0;
+}
+
+.h3 {
+    display: block;
+    font-size: 26rpx;
+    font-weight: 600;
+    color: #444444;
+    margin: 15rpx 0 10rpx 0;
+}
+
+.li {
+    display: block;
+    font-size: 22rpx;
+    color: #555555;
+    margin-bottom: 12rpx;
+    line-height: 1.5;
+    padding-left: 20rpx;
+    position: relative;
+}
+
+.li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #ff8c00;
+    font-weight: bold;
+}

@@ -1,0 +1,20 @@
+<view class="welcome-page">
+  <view class="fog-background">
+    <view class="fog-cloud fog-left"></view>
+    <view class="fog-cloud fog-center"></view>
+    <view class="fog-cloud fog-right"></view>
+  </view>
+  <view class="main-content">
+    <view class="welcome-text">
+      <text class="welcome-title">欢迎来到</text>
+      <text class="brand-name">resetDays</text>
+      <text class="subtitle">请相信没人会来</text>
+    </view>
+    <view class="inspirational-text">
+      <text>你必须一而再</text>
+      <text>再而三</text>
+      <text>千万次的救自己于这人间水火</text>
+    </view>
+    <image src="/img/1321314847.png" class="bottom-illustration" />
+  </view>
+</view>

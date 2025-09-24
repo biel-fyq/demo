@@ -1,0 +1,83 @@
+<view>
+  <!-- 图标页面 - 第一个展示 -->
+  <view class="icon-page" wx:if="{{showIconPage}}">
+    <view class="flex-center-container">
+      <view class="circle-background"></view>
+      <image src="/img/1321314846.png" mode="aspectFit" class="centered-image" />
+    </view>
+  </view>
+  <!-- 欢迎页面 -->
+  <view class="welcome-page" wx:if="{{showWelcomePage}}">
+    <view class="fog-background">
+      <view class="fog-cloud fog-left"></view>
+      <view class="fog-cloud fog-center"></view>
+      <view class="fog-cloud fog-right"></view>
+    </view>
+    <view class="main-content">
+      <view class="welcome-text">
+        <text class="welcome-title">欢迎来到</text>
+        <text class="brand-name">resetDays</text>
+        <text class="subtitle">请相信没人会来</text>
+      </view>
+      <view class="inspirational-text">
+        <text>你必须一而再</text>
+        <text>再而三</text>
+        <text>千万次的救自己于这人间水火</text>
+      </view>
+      <image src="/img/1321314847.png" class="bottom-illustration" />
+    </view>
+  </view>
+  <!-- 登录页面 -->
+  <view class="login-page" wx:if="{{showLoginPage}}">
+    <view class="main-content">
+      <view class="logo-section">
+        <view class="flex-center-container">
+          <view class="circle-background"></view>
+          <image src="/img/1321314846.png" class="centered-image logo-image" mode="aspectFit" />
+        </view>
+      </view>
+      <view class="welcome-text-login">
+        <text class="welcome-title-login">欢迎加入ResetDays</text>
+      </view>
+      <view class="button-section">
+        <button class="login-btn wechat-btn" bindtap="onWechatLogin">
+          <image src="/img/1321314883.png" class="wechat-icon" mode="aspectFit" />
+          <text class="btn-text">微信授权登录</text>
+        </button>
+        <button class="cancel-btn" bindtap="onCancel">
+          <text class="btn-text">取消</text>
+        </button>
+      </view>
+    </view>
+  </view>
+  <!-- 微信登陆的方式 -->
+  <!-- <view>
+    <scroll-view class="scrollarea" scroll-y type="list">
+      <view class="login-container">
+        <view class="form-container">
+          <view class="userinfo">
+            <block wx:if="{{hasUserInfo}}">
+              <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+                <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+              </button>
+              <view class="nickname-wrapper">
+                <text class="nickname-label">昵称</text>
+                <input type="nickname" class="nickname-input" placeholder="请输入昵称" bind:change="onInputChange" />
+              </view>
+            </block>
+            <block wx:elif="{{!hasUserInfo}}">
+              <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile">获取头像昵称</button>
+              <view wx:else>请使用2.10.4及以上版本基础库</view>
+            </block>
+            <block wx:else>
+              <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+              <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+            </block>
+          </view>
+
+          <button class="confirm-button">确定</button>
+        </view>
+      </view>
+    </scroll-view>
+  </view> -->
+</view>
