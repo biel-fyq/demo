@@ -1,0 +1,140 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* 背景图片层 - 只模糊背景 */
+.background-blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 1140rpx 1710rpx;
+  background-image: url("https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250924/f96d447910d359bad237c97e6bc8d527de93feec_1758690547272.png");
+  background-repeat: no-repeat;
+  background-position: -168rpx -44rpx;
+  filter: blur(8rpx);
+  z-index: 0;
+}
+
+.frost-tint {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 5;
+}
+
+.page-content {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 34rpx !important;
+}
+
+
+
+.logo {
+  width: 162rpx;
+  height: 64rpx;
+}
+
+.header-title {
+  font-family: ZCOOL KuaiLe;
+  font-weight: 400;
+  font-size: 40rpx;
+  color: #FFFFFF;
+  text-align: center;
+  flex: 1;
+}
+
+/* 信件列表内容 */
+.letter-list-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20rpx 30rpx 40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.letter-card {
+  width: 75vw;
+  background: #ffffff;
+  border-radius: 16rpx;
+  margin-bottom: 30rpx;
+  padding: 40rpx 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.letter-card:last-child {
+  margin-bottom: 0;
+}
+
+.letter-card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.letter-date {
+  font-size: 36rpx;
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 12rpx;
+  font-family: Inter;
+  font-weight: 600;
+  font-style: Semi Bold;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.letter-preview {
+  font-size: 32rpx;
+  color: #696363;
+  line-height: 2;
+  margin-top: 20rpx;
+  font-family: Inter;
+  font-weight: 400;
+  font-style: Regular;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.letter-view-btn {
+  width: 192rpx !important;
+  height: 66rpx;
+  background: #FFC300;
+  color: #333;
+  border: 2.4rpx solid #000;
+  font-size: 24rpx;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.letter-view-btn::after {
+  border: none;
+}
+
+.letter-card-icon {
+  position: absolute;
+  top: -50rpx;
+  right: -40rpx;
+  width: 118rpx;
+  height: 118rpx;
+  z-index: 999;
+  transform: rotate(-30deg);
+}

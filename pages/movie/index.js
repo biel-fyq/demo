@@ -4,12 +4,14 @@ Page({
     currentIndex: 1, // 默认中间那张是选中
     showBookModal: false,
     selectedBook: {},
-    posters: [{
-        src: 'https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250922/04da6e85daa638cbda4483e3a42840bd6a8ff74e_1758550999261.png'
-      },
+    posters: [
       {
         src: 'https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250922/Mask group (2)_1758550910272.png'
       },
+      {
+        src: 'https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250922/04da6e85daa638cbda4483e3a42840bd6a8ff74e_1758550999261.png'
+      },
+      
       {
         src: 'https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250922/image 224_1758550945650.png'
       },

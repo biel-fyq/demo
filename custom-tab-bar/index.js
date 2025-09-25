@@ -14,28 +14,25 @@ Component({
   lifetimes: {
     attached() {
       try {
-        const win = (wx.getWindowInfo && wx.getWindowInfo()) 
+        const win = (wx.getWindowInfo && wx.getWindowInfo())
         const insets = win.safeAreaInsets || {};
-        const safeArea = win.safeArea || {};
-        const bottomInsetPx = (typeof insets.bottom === 'number')
-          ? insets.bottom
-          : Math.max(0, (win.screenHeight || 0) - (safeArea.bottom || (win.screenHeight || 0)));
+        const bottomInsetPx = (typeof insets.bottom === 'number') ? insets.bottom : 0;
         const rpxPerPx = 750 / (win.windowWidth || win.screenWidth || 375);
         const safeBottomRpx = Math.round(bottomInsetPx * rpxPerPx);
-        const baseLiftRpx = -50; // 默认抬升
-        const contentBottomRpx = safeBottomRpx > 0 ? (safeBottomRpx + baseLiftRpx) : 12;
-        this.setData({ safeBottomRpx, contentBottomRpx });
+        // 简化计算，不使用复杂的抬升逻辑
+        this.setData({
+          safeBottomRpx: safeBottomRpx,
+          contentBottomRpx: 0
+        });
       } catch (e) {
-        this.setData({ safeBottomRpx: 0, contentBottomRpx: 12 });
+        this.setData({ safeBottomRpx: 0, contentBottomRpx: 0 });
       }
     }
   },
   methods: {
     // 运行期微调抬升高度（rpx）
     setLift(liftRpx = 0) {
-      const safe = this.data.safeBottomRpx || 0;
-      const contentBottomRpx = safe > 0 ? (safe + liftRpx) : 12;
-      this.setData({ contentBottomRpx });
+      this.setData({ contentBottomRpx: liftRpx });
     },
     switchTab(index) {
       this.setData({ activeIndex: index });

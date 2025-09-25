@@ -1,18 +1,27 @@
 .whisper-container {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url("https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250924/f96d447910d359bad237c97e6bc8d527de93feec_1758690547272.png");
-  background-size: cover;
-  background-position: center;
+  overflow: hidden;
 }
 
-/* 毛玻璃：用一个半透明图层 + 背景模糊层 */
+/* 背景模糊层：只模糊背景，不影响内容 */
+.background-blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 1140rpx 1710rpx;
+  background-image: url("https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250924/f96d447910d359bad237c97e6bc8d527de93feec_1758690547272.png");
+  background-repeat: no-repeat;
+  background-position: -168rpx -44rpx;
+  filter: blur(8rpx);
+  z-index: 0;
+}
+
 .frost-bg {
   position: absolute;
   inset: 0;
@@ -23,21 +32,29 @@
 .frost-tint {
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 1;
 }
 
 .seal-popup-mask { display: none; }
 
 .envelope {
+  position: relative;
+  z-index: 2;
   width: 90vw;
-  height: 70vh;
-  margin: 0 auto;
+  max-width: 700rpx;
+  margin: calc(env(safe-area-inset-top) + 48rpx) auto 0;
+  margin: calc(constant(safe-area-inset-top) + 48rpx) auto 0;
   background: #FAFBFF;
-  border: 8rpx solid #E9CDAE;
+  border: 6rpx solid #E9CDAE;
   border-radius: 20rpx;
-  box-shadow: 0 6rpx 18rpx rgba(0, 0, 0, 0.06);
-  padding: 24rpx;
+  box-shadow: 0 10rpx 30rpx rgba(0, 0, 0, 0.08);
+  padding: 28rpx;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin-top: 200rpx;
+  height: 70vh;
 }
 .message-header-btn {
   display: flex;
@@ -50,11 +67,12 @@
 }
 
 .time-capsule-message {
-  margin-top: 16rpx;
+  margin-top: 20rpx;
   background: #FBF7F4;
   border-radius: 16rpx;
-  padding: 32rpx;
-  max-height: 58vh;
+  padding: 24rpx;
+  flex: 1;
+  min-height: 40vh;
   overflow-y: auto;
   font-size: 28rpx;
   line-height: 1.9;
@@ -63,26 +81,18 @@
 
 .editor-wrap {
   position: relative;
-}
-
-.letter-textarea {
   width: 100%;
-  min-height: 48vh; /* 让输入区域更大 */
-  border-radius: 16rpx;
-  padding: 28rpx;
-  box-sizing: border-box;
-  font-size: 28rpx;
-  line-height: 1.9;
-  color: #333333;
+  height: 100%;
 }
 
 /* 自定义多行 placeholder */
 .textarea-placeholder {
   position: absolute;
-  left: 28rpx;
-  top: 28rpx;
-  right: 28rpx;
-  color: #b7b7b7;
+  left: 24rpx;
+  top: 24rpx;
+  right: 24rpx;
+  color: #1F1E1F;
+  opacity: 0.28;
   pointer-events: none;
   font-size: 28rpx;
   line-height: 1.9;
@@ -107,16 +117,32 @@
   z-index: 1000;
 }
 
+.soul-button-top {
+  width: 268rpx !important;
+  height: 70rpx !important;
+  background-color: #ffffff;
+  border: 2rpx solid #000000;
+  border-radius: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #000;
+}
+
 .soul-button {
   width: 280rpx !important;
-  padding: 28rpx 0;
-  font-size: 30rpx;
-  color: #3a4a5a;
+  height: 120rpx !important;
+  font-size: 40rpx;
   background-color: #ffffff;
-  border: 2rpx solid #111111;
+  border: 2rpx solid #000000;
   border-radius: 60rpx;
-  box-shadow: 0 6rpx 16rpx rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  color: #000;
 }
 
 

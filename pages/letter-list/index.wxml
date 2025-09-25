@@ -1,0 +1,24 @@
+<view class="container">
+    <view class="safe-top-spacer"></view>
+    <!-- 模糊背景层 -->
+    <view class="background-blur"></view>
+    <view class="frost-tint"></view>
+    <!-- 页面内容 -->
+    <view class="page-content">
+        <!-- 信件列表 -->
+        <view class="letter-list-content">
+            <block wx:for="{{letterList}}" wx:key="index">
+                <view class="letter-card">
+                    <image class="letter-card-icon" wx:if="{{index == 0 || index == letterList.length - 1}}" src="https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250924/5c3250e6392aae345b65ecafaaae94835de1de7c_1758691793874.png"></image>
+                    <view class="letter-card-content">
+                        <view class="letter-date">{{item.date}}</view>
+                        <view class="letter-preview">{{item.preview}}</view>
+                    </view>
+                    <button class="letter-view-btn" bindtap="viewLetter" data-index="{{index}}">
+                        查看
+                    </button>
+                </view>
+            </block>
+        </view>
+    </view>
+</view>

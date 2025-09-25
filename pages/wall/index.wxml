@@ -1,5 +1,9 @@
-<view class="container">
-  <view class="title">写下你撞过的南墙</view>
-  <textarea class="input-area" placeholder="不用很长，写下你撞过的南墙吧！" bindinput="onInput" value="{{content}}"></textarea>
-  <button class="confirm-btn" bindtap="submitContent">确定</button>
+<view class="feedback-page">
+    <view class="content">
+        <text class="label">写下你撞过的南墙</text>
+        <view class="input-card">
+            <textarea class="textarea" placeholder="不用很长，写下你撞过的南墙吧！" placeholder-class="ph" maxlength="300" bindinput="onInput" />
+        </view>
+        <button class="confirm-btn" bindtap="onSubmit">确定</button>
+    </view>
 </view>

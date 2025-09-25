@@ -2,25 +2,25 @@ Page({
   data: {
     sealPopupModal: false,
     showLetterListModal: false,
-    days: 91, // 给多少天后的自己写信
+    days: 91,
     name: '夏～', // 收信人昵称
     date: '2025-09-11', // 日期
     time: '15:23', // 时间
     letterList: [{
-        date: '2025.6.7',
-        preview: '和我讨厌的人拜拜信...',
-        content: '和我讨厌的人拜拜信，希望我们永远不要再见面了。'
-      },
-      {
-        date: '2025.6.7',
-        preview: '和我讨厌的人拜拜信...',
-        content: '和我讨厌的人拜拜信，希望我们永远不要再见面了。'
-      },
-      {
-        date: '2025.6.7',
-        preview: '和我讨厌的人拜拜信...',
-        content: '和我讨厌的人拜拜信，希望我们永远不要再见面了。'
-      }
+      date: '2025.6.7',
+      preview: '和我讨厌的人拜拜信...',
+      content: '和我讨厌的人拜拜信，希望我们永远不要再见面了。'
+    },
+    {
+      date: '2025.6.7',
+      preview: '和我讨厌的人拜拜信...',
+      content: '和我讨厌的人拜拜信，希望我们永远不要再见面了。'
+    },
+    {
+      date: '2025.6.7',
+      preview: '和我讨厌的人拜拜信...',
+      content: '和我讨厌的人拜拜信，希望我们永远不要再见面了。'
+    }
     ]
   },
 
@@ -52,15 +52,8 @@ Page({
 
   // 显示信件列表
   showLetterList() {
-    this.setData({
-      showLetterListModal: true
-    });
-  },
-
-  // 隐藏信件列表
-  hideLetterList() {
-    this.setData({
-      showLetterListModal: false
+    wx.navigateTo({
+      url: '/pages/letter-list/index'
     });
   },
 
@@ -99,12 +92,8 @@ Page({
 
   // 页面初始化时注册事件监听
   onReady: function () {
-    // 给信封添加点击事件
-    this.envelopeCtx = wx.createSelectorQuery().select('.envelope')
-    this.envelopeCtx.on('tap', this.writeToLetter).exec()
-
-    // 给导航按钮添加点击事件
-    this.mailIconCtx = wx.createSelectorQuery().select('.mail-icon')
-    this.mailIconCtx.on('tap', this.goToMailList).exec()
+    // 注意：信封和邮件图标元素已在WXML中被注释掉
+    // 如果需要重新启用，请先在WXML中取消注释相关元素
+    // 然后使用 bindtap 属性直接绑定事件，而不是使用 createSelectorQuery
   }
 })

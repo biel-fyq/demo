@@ -1,18 +1,19 @@
 {
   "pages": [
-    "pages/home/index",
-    "pages/barrier/index",
-    "pages/letter/index",
-    "pages/letter/view-letter/index",
-    "pages/movie/index",
+    "pages/write-name/index",
+    "pages/wall/index",
     "pages/my/index",
+    "pages/catalogue/index",
+    "pages/movie/index",
+    "pages/home/index",
+    "pages/letter/view-letter/index",
+    "pages/letter/index",
+    "pages/letter-list/index",
+    "pages/barrier/index",
     "pages/welcome/index",
     "pages/feedback/index",
     "pages/reading/index",
-    "pages/catalogue/index",
     "pages/play-the-video/index",
-    "pages/write-name/index",
-    "pages/wall/index",
     "pages/kit/index",
     "pages/rescue/index",
     "pages/logs/index",
@@ -32,7 +33,7 @@
   "window": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "",
-    "navigationBarBackgroundColor": "#ffffff"
+    "navigationBarBackgroundColor": "#F8F8F8"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",

@@ -202,7 +202,6 @@ page {
 	bottom: 0;
 	background: rgba(0, 0, 0, 0.35);
   z-index: 9998;
-	/* 高于自定义 tabBar */
 }
 
 .popup {
@@ -245,7 +244,7 @@ page {
 .calendar-content {
 	position: absolute;
 	inset: 0;
-	padding: 28rpx 24rpx 20rpx;
+	padding: 60rpx 24rpx 20rpx;
 }
 
 .calendar-header {
@@ -477,9 +476,11 @@ page {
 .logo {
 	width: 162rpx;
 	height: 64rpx;
-	position: relative;
-	top: -4vh;
-	margin-left: 20rpx;
+	position: fixed;
+	top: calc(60rpx + constant(safe-area-inset-top));
+	top: calc(60rpx + env(safe-area-inset-top));
+	left: 20rpx;
+	z-index: 10;
 }
 
 .process-box {

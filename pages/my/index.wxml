@@ -1,7 +1,7 @@
 <view class="my-body">
 	<!-- 顶部背景 + 底部徽章 -->
+  <image src="https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250924/logo_1758704246674.png" alt="" class="logo" />
 	<view class="hero">
-	<image src="/img/logo.png" alt="" class="my-logo"/>
 		<image class="hero-bg" src="https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250922/0b38f0aef8009c93e7e5a3ed6c6e6f3427ed7491_1758553173851.png" mode="aspectFill"></image>
 		<!-- 背景图上居中的头像 -->
 		<image class="hero-avatar" src="https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250922/0b38f0aef8009c93e7e5a3ed6c6e6f3427ed7491_1758553173851.png" mode="aspectFill" />

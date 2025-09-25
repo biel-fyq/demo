@@ -30,7 +30,6 @@ Page({
     },
   
     toCatalog() {
-      console.log(1111);
       wx.navigateTo({
         url: '/pages/catalogue/index',
       })

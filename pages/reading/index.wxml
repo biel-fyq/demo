@@ -1,14 +1,14 @@
 <view class="container">
+<view style="width: 85vw;margin: 0 auto;">
   <!-- 动态标题 -->
   <view class="title">{{article.title}}</view>
-
   <!-- 动态正文 -->
   <view class="content">
     <block wx:for="{{article.paragraphs}}" wx:key="index">
       <text>{{item}}</text>
     </block>
   </view>
-
+</view>
   <!-- 底部菜单 -->
   <view class="footer">
     <view class="menu-item" bindtap="toCatalog">

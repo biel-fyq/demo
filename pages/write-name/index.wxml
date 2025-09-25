@@ -1,7 +1,7 @@
 <view class="container">
   <!-- 顶部标题 -->
   <view class="title">
-    <text>写下ta的名字</text>
+   写下ta的名字
   </view>
   
   <!-- 名称输入框 -->

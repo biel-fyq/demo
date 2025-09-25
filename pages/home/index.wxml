@@ -56,7 +56,7 @@
 						<image class="calendar-bg-image" src="https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250924/%E6%97%A5%E5%8E%86_1758713530166.png" mode="widthFix"/>
 					</view>
 					<view class="calendar-content">
-						<view class="calendar-header">{{calendarTitle}}</view>
+						<!-- <view class="calendar-header">{{calendarTitle}}</view> -->
 						<view class="calendar-week">
 							<block wx:for="{{weekTitles}}" wx:key="idx">
 								<view class="calendar-week-item">{{item}}</view>

@@ -1,45 +1,77 @@
-.container {
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    padding: 40rpx 40rpx;
-    min-height: 100vh;
-    background-color: #f8f8f8;
-  }
-  
-  .title {
-    font-size: 40rpx;
-    color: #b78b56;
-    margin-bottom: 40rpx;
-    font-weight: bold;
-  }
-  
-  .input-area {
-    width: 100%;
-    height: 400rpx;
-    background-color: #ffffff;
-    border-radius: 20rpx;
-    padding: 30rpx;
-    font-size: 30rpx;
-    color: #333333;
-    margin-bottom: 40rpx;
-    box-sizing: border-box;
-  }
-  
-  .confirm-btn {
-    width: 80%;
-    height: 90rpx;
-    line-height: 90rpx;
-    background-color: #ffcc00;
-    color: #000000;
-    font-size: 36rpx;
-    border-radius: 45rpx;
-    border: 4rpx solid #000000;
-    text-align: center;
-    margin-top: 20rpx;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 32rpx;
-    font-weight: 500;
-  }
+.feedback-page {
+  min-height: 100vh;
+  background: #F8F8F8;
+  padding-top: calc(200rpx + env(safe-area-inset-top));
+  padding-top: calc(200rpx + constant(safe-area-inset-top));
+}
+
+.content {
+  padding: 24rpx 32rpx 48rpx;
+}
+
+.label {
+  color: #A47435;
+  font-size: 36rpx;
+  font-family: ZCOOL KuaiLe;
+  font-weight: 400;
+  font-style: Regular;
+  line-height: 140%;
+  letter-spacing: 0.3px;
+  /* margin-left: 30rpx; */
+}
+
+.input-card {
+  margin-top: 16rpx;
+  background: #fff;
+  border-radius: 24rpx;
+  padding: 20rpx;
+  position: relative;
+  margin-top: 40rpx;
+}
+
+.textarea {
+  width: 654rpx;
+  height: 600rpx;
+  border-radius: 24rpx;
+  font-size: 28rpx;
+  line-height: 1.6;
+}
+
+.ph {
+  color: #D0D0D0;
+}
+
+.counter {
+  position: absolute;
+  right: 20rpx;
+  bottom: 20rpx;
+  color: #999;
+  font-size: 24rpx;
+}
+
+.confirm-btn {
+  width: 320rpx !important;
+  height: 110rpx !important;
+  line-height: 96rpx;
+  text-align: center;
+  border-radius: 60rpx;
+  background: #FECE01;
+  border: 4rpx solid #111;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  font-weight: 500;
+  color: #000;
+  margin-top: 60rpx;
+}
+
+.confirm-btn[disabled] {
+  opacity: 0.6;
+}
+
+.safe-bottom {
+  height: constant(safe-area-inset-bottom);
+  height: env(safe-area-inset-bottom);
+}

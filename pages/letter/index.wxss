@@ -6,7 +6,22 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+}
+
+/* 背景图片层 - 只模糊背景 */
+.background-blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 1140rpx 1710rpx;
   background-image: url("https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250924/f96d447910d359bad237c97e6bc8d527de93feec_1758690547272.png");
+  background-repeat: no-repeat;
+  background-position: -168rpx -44rpx;
+  filter: blur(8rpx);
+  z-index: 0;
 }
 
 .background-container {
@@ -25,17 +40,54 @@
   transform: scale(1.1);
 }
 
-/* ✔️ 信封下移，增大与文字的距离 */
 .envelope {
-
+  width: 580rpx;
+  height: 426rpx;
+  margin-top: 40rpx;
+  z-index: 10;
+  position: relative;
 }
 
 .content {
   text-align: center;
   color: #ffffff;
-  z-index: 1;
+  z-index: 10;
   margin-top: 20rpx;
+  position: relative;
   /* 可选：微调文字与信封的间距 */
+}
+
+.part_one_title {
+  font-family: ZCOOL KuaiLe;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 40rpx;
+  line-height: 20px;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #FFFFFF
+}
+
+.part_one_title_name {
+  font-family: ZCOOL KuaiLe;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 52rpx;
+  line-height: 20px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.part_two_title {
+  font-family: ZCOOL KuaiLe;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 40rpx;
+  line-height: 30px;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #FFFFFF;
+
 }
 
 .title {
@@ -64,22 +116,30 @@
 
 .letter-list-button {
   position: absolute;
-  top: 100px;
-  right: 20px;
+  top: 192rpx;
+  right: 21rpx;
   display: flex;
   flex-direction: column;
   /* 改为垂直排列 */
   align-items: center;
   /* 水平居中（图标和文字整体居中） */
   color: #ffffff;
-  z-index: 1;
+  z-index: 10;
 }
 
 .icon {
-  width: 82rpx;
+  width: 88rpx;
   height: 106rpx;
-  margin-bottom: 5rpx;
-  /* 图标与文字的间距 */
+}
+
+.letter-list-text {
+  font-family: ZCOOL KuaiLe;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 28rpx;
+  line-height: 140%;
+  letter-spacing: 0.3px;
+  color: #000000;
 }
 
 .seal-popup-container {
@@ -146,13 +206,13 @@
 }
 
 .letter-btn {
-  width: 260rpx !important;
-  height: 88rpx;
+  width: 320rpx !important;
+  height: 120rpx;
   height: 110rpx;
   background-color: #FFFFFF;
   border: 1px solid #000000;
   border-radius: 50rpx;
-  margin-top: 50rpx;
+  margin-top: 49rpx;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -161,34 +221,23 @@
   color: #000;
 }
 
-/* index.wxss */
 
-page {
-  background-color: #f0f4f8;
-}
 
 .whisper-container {
   width: 100%;
-  
+
 }
 
 
 .frost-tint {
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 5;
 }
 
 
-.letter-logo {
-  position: fixed;
-	top: calc(80rpx + env(safe-area-inset-top));
-	left: 12%;
-	transform: translateX(-50%);
-	z-index: 9999;
-	width: 162rpx;
-	height: 64rpx;
-}
+
 
 /* 信件列表弹框样式 */
 .letter-list-modal-mask {
@@ -271,17 +320,28 @@ page {
 }
 
 .letter-date {
-  font-size: 32rpx;
+  font-size: 36rpx;
   color: #000;
   font-weight: bold;
   margin-bottom: 12rpx;
+  font-family: Inter;
+  font-weight: 600;
+  font-style: Semi Bold;
+  line-height: 100%;
+  letter-spacing: 0%;
 }
 
 .letter-preview {
-  font-size: 28rpx;
-  color: #666;
+  font-size: 32rpx;
+  color: #696363;
   line-height: 2;
   margin-top: 20rpx;
+  font-family: Inter;
+font-weight: 400;
+font-style: Regular;
+line-height: 100%;
+letter-spacing: 0%;
+
 }
 
 .letter-view-btn {
@@ -289,7 +349,7 @@ page {
   height: 66rpx;
   background: #FFC300;
   color: #333;
-  border: 2rpx solid #000;
+  border: 2.4rpx solid #000;
   font-size: 24rpx;
   font-weight: 500;
   display: flex;
@@ -304,10 +364,10 @@ page {
 
 .letter-card-icon {
   position: absolute;
-  top: -40rpx;
+  top: -50rpx;
   right: -40rpx;
-  width: 110rpx;
-  height: 110rpx;
+  width: 118rpx;
+  height: 118rpx;
   z-index: 999;
   transform: rotate(-30deg);
 }

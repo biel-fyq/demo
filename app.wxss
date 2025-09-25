@@ -25,3 +25,13 @@
 	height: calc(env(safe-area-inset-top) + 160rpx);
 	width: 100%;
 }
+
+.logo {
+  width: 164rpx;
+	height: 64rpx;
+	position: fixed;
+	top: calc(92rpx + constant(safe-area-inset-top));
+	top: calc(92rpx + env(safe-area-inset-top));
+	left: 48rpx;
+	z-index: 10;
+}
