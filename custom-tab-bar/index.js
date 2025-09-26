@@ -1,4 +1,13 @@
 Component({
+  lifetimes: {
+    ready: function() {
+      const pages = getCurrentPages()
+      if (pages.length > 0) {
+        const index = this.data.list.findIndex(({ pagePath }) => pagePath.endsWith(pages[0]?.route))
+        this.setData({ selected: index})
+      }
+    },
+  },
   data: {
     selected: 0,
     color: '#666',
@@ -18,14 +27,14 @@ Component({
       const index = (event && typeof event.detail === 'number')
         ? event.detail
         : Number(event?.currentTarget?.dataset?.index || 0);
-      const item = this.data.list[index];
-      if (!item) return;
-      const url = item.pagePath; // 已包含前导 /
-      this.setData({ selected: index });
-      wx.switchTab({ url });
-    },
-    setSelected(index) {
-      if (typeof index === 'number') this.setData({ selected: index });
+      
+      if (typeof index !== 'number')
+        return
+
+      if (index > this.data.list.length)
+        return
+
+      wx.switchTab({ url: this.data.list[index]?.pagePath });
     }
   }
 });
