@@ -1,47 +1,31 @@
 Component({
   data: {
-    activeIndex: 0,
-    safeBottomRpx: 0,
-    contentBottomRpx: 0,
-    items: [
-      { text: '新生', iconPath: 'https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250924/Group 1321315011_1758703383275.png', pagePath: '/pages/home/index' },
-      { text: '结界', iconPath: 'https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250924/Group 1321314835_1758703395709.png', pagePath: '/pages/barrier/index' },
-      { text: '信签', iconPath: 'https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250924/Group 1321314837_1758703407817.png', pagePath: '/pages/letter/index' },
-      { text: '星火', iconPath: 'https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250924/Group 1321314832_1758703419535.png', pagePath: '/pages/movie/index' },
-      { text: '自我', iconPath: 'https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250924/Group 1321314838_1758703432214.png', pagePath: '/pages/my/index' }
+    selected: 0,
+    color: '#666',
+    activeColor: '#1989fa',
+    // 与 app.json 的 tabBar.list 完全一致（带前导 /）
+    list: [
+      { pagePath: '/pages/home/index', text: '新生', iconPath: '/img/icon/1.png', selectedIconPath: '/img/icon/1.png' },
+      { pagePath: '/pages/barrier/index', text: '结界', iconPath: '/img/icon/2.png', selectedIconPath: '/img/icon/2.png' },
+      { pagePath: '/pages/letter/index', text: '信签', iconPath: '/img/icon/3.png', selectedIconPath: '/img/icon/3.png' },
+      { pagePath: '/pages/movie/index', text: '星火', iconPath: '/img/icon/4.png', selectedIconPath: '/img/icon/4.png' },
+      { pagePath: '/pages/my/index', text: '自我', iconPath: '/img/icon/5.png', selectedIconPath: '/img/icon/5.png' }
     ]
   },
-  lifetimes: {
-    attached() {
-      try {
-        const win = (wx.getWindowInfo && wx.getWindowInfo())
-        const insets = win.safeAreaInsets || {};
-        const bottomInsetPx = (typeof insets.bottom === 'number') ? insets.bottom : 0;
-        const rpxPerPx = 750 / (win.windowWidth || win.screenWidth || 375);
-        const safeBottomRpx = Math.round(bottomInsetPx * rpxPerPx);
-        // 简化计算，不使用复杂的抬升逻辑
-        this.setData({
-          safeBottomRpx: safeBottomRpx,
-          contentBottomRpx: 0
-        });
-      } catch (e) {
-        this.setData({ safeBottomRpx: 0, contentBottomRpx: 0 });
-      }
-    }
-  },
   methods: {
-    // 运行期微调抬升高度（rpx）
-    setLift(liftRpx = 0) {
-      this.setData({ contentBottomRpx: liftRpx });
+    onChange(event) {
+      // 兼容 vant 的 change 事件（detail 为索引）和自定义 dataset 触发
+      const index = (event && typeof event.detail === 'number')
+        ? event.detail
+        : Number(event?.currentTarget?.dataset?.index || 0);
+      const item = this.data.list[index];
+      if (!item) return;
+      const url = item.pagePath; // 已包含前导 /
+      this.setData({ selected: index });
+      wx.switchTab({ url });
     },
-    switchTab(index) {
-      this.setData({ activeIndex: index });
-    },
-    onIconTap(e) {
-      const index = e.currentTarget.dataset.index;
-      const pagePath = this.data.items[index].pagePath;
-      this.switchTab(index);
-      if (pagePath) wx.switchTab ? wx.switchTab({ url: pagePath }) : wx.reLaunch({ url: pagePath });
+    setSelected(index) {
+      if (typeof index === 'number') this.setData({ selected: index });
     }
   }
 });

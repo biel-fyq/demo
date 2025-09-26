@@ -1,18 +1,26 @@
-<view class="menu-bar">
+<!-- <view class="menu-bar">
   <view class="content" style="bottom: {{contentBottomRpx}}rpx;">
-    <image src="/img/Mask_group.png" mode="widthFix" class="menu-bar-bg"/>
+    <image src="/img/Mask_group.png" mode="widthFix" class="menu-bar-bg" />
     <view class="menu-icons-container">
-    <block wx:for="{{items}}" wx:key="index">
-      <view class="menu-icon-wrapper" data-index="{{index}}" bindtap="onIconTap">
-        <image src="{{item.iconPath}}" mode="aspectFit" class="menu-icon"/>
-        <view wx:if="{{activeIndex === index}}" class="menu-tag-wrapper">
-          <image src="https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250924/Vector 308_1758703578771.png" class="menu-tag" />
-          <text class="menu-tag-text">{{item.text}}</text>
+      <block wx:for="{{items}}" wx:key="index">
+        <view class="menu-icon-wrapper" data-index="{{index}}" bindtap="onIconTap">
+          <image src="{{item.iconPath}}" mode="aspectFit" class="menu-icon" />
+          <view wx:if="{{activeIndex === index}}" class="menu-tag-wrapper">
+            <image src="https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250924/Vector 308_1758703578771.png" class="menu-tag" />
+            <text class="menu-tag-text">{{item.text}}</text>
+          </view>
         </view>
-      </view>
-    </block>
+      </block>
     </view>
   </view>
   <view class="safe-area" style="height: {{safeBottomRpx}}rpx;"></view>
-</view>
+</view> -->
 
+<view class="tabbar">
+    <block wx:for="{{list}}" wx:key="index">
+        <view class="tab-item" data-index="{{index}}" bindtap="onChange">
+            <image class="icon" src="{{selected === index ? item.selectedIconPath : item.iconPath}}" mode="aspectFit" />
+            <text>{{selected === index ? item.text : ''}}</text>
+        </view>
+    </block>
+</view>

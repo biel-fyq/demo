@@ -30,7 +30,8 @@ Page({
   },
   onShow() {
     if (this.getTabBar && this.getTabBar()) {
-      this.getTabBar().switchTab(2);
+      const tabbar = this.getTabBar && this.getTabBar();
+      tabbar && tabbar.syncCurrentPage && tabbar.syncCurrentPage();
     }
   },
   openLetter() {
@@ -40,6 +41,8 @@ Page({
 
   },
   writeLetter() {
+    console.log(1111);
+    console.log(22222);
     wx.navigateTo({
       url: '/pages/letter/view-letter/index',
     })

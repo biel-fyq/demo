@@ -75,7 +75,7 @@ page {
 
 .welcome-text {
   text-align: center;
-  transform: rotate(-8deg);
+  transform: rotate(-14deg);
   margin-bottom: 100rpx;
   width: 80%;
 }
@@ -87,33 +87,54 @@ page {
   color: #000000;
   letter-spacing: 2rpx;
   text-align: center;
+  font-family: ZCOOL QingKe HuangYou;
+  font-weight: 400;
+  font-style: Regular;
+  letter-spacing: 0%;
+  text-align: center;
+
 }
 
 .brand-name {
   display: block;
   font-size: 90rpx;
-  font-weight: 900;
+  font-weight: 700;
   color: #000000;
-  margin-bottom: 15rpx;
-  letter-spacing: 4rpx;
-  text-align: center;
+  letter-spacing: 10rpx;
+  width: 428rpx;
+  height: 74rpx;
+  margin: 0 auto;
 }
 
 .subtitle {
   display: block;
-  font-size: 40rpx;
   font-weight: 600;
   color: #000000;
   letter-spacing: 2rpx;
   text-align: end;
+  font-family: ZCOOL QingKe HuangYou;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 40rpx;
+  line-height: 48rpx;
+  letter-spacing: 0%;
+  text-align: right;
+  margin-top: 50rpx;
+
 }
 
 .inspirational-text {
   text-align: center;
   transform: rotate(-15deg);
   margin-bottom: 120rpx;
-  width: 80%;
-  margin-top: 100rpx;
+  margin-top: 68rpx;
+  font-family: ZCOOL KuaiLe;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 36rpx;
+  line-height: 48rpx;
+  letter-spacing: 0%;
+  text-align: center;
 }
 
 .inspirational-text text {

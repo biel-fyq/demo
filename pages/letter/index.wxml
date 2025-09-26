@@ -12,14 +12,14 @@
       </view>
       <image class="envelope" src="/img/17.png" mode="aspectFit" bindtap="openLetter" />
     </view> -->
-    <!-- <view>
+    <view>
       <view class="content">
         <text class="part_two_title">给未来的自己写一封信吧</text>
         <view class="part_two_title">去将来，</view>
         <view class="part_two_title">更好的你</view>
       </view>
-      <button class="letter-btn" bindtap="writeLetter">去写信</button>
-    </view> -->
+      <button class="letter-btn" bindtap="writeLetter" style="z-index: 999;">去写信</button>
+    </view>
     <view class="letter-list-button" bindtap="showLetterList">
       <image class="icon" src="https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250924/19_1758696210339.png" mode="aspectFit" />
       <text class="letter-list-text">信件列表</text>

@@ -22,15 +22,34 @@
 .safe-top-spacer {
   height: calc(88rpx + constant(safe-area-inset-top)); /* 旧，可省略 */
   height: calc(88rpx + env(safe-area-inset-top));      /* 新，推荐 */
+  min-height: 44rpx;
 	width: 100%;
 }
 
 .logo {
   width: 164rpx;
-	height: 64rpx;
-	position: fixed;
-	top: calc(92rpx + constant(safe-area-inset-top));
-	top: calc(92rpx + env(safe-area-inset-top));
-	left: 48rpx;
-	z-index: 10;
+  height: 64rpx;
+  position: fixed;
+  top: calc(0rpx + constant(safe-area-inset-top));
+  top: calc(0rpx + env(safe-area-inset-top));
+  left: 30rpx;
+  z-index: 10;
+  /* 添加最小顶部距离，确保在非刘海屏设备上也有合适位置 */
+}
+
+/* 针对不同设备的适配 */
+@media screen and (max-width: 375px) {
+  .logo {
+    width: 140rpx;
+    height: 56rpx;
+    left: 32rpx;
+  }
+}
+
+@media screen and (min-width: 414px) {
+  .logo {
+    width: 180rpx;
+    height: 70rpx;
+    left: 60rpx;
+  }
 }

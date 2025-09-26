@@ -1,6 +1,11 @@
 <view class="container">
     <image src="https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250922/eddb79c8110b8e55c3d08a398a0d901d0169af94_1758523802092.png" class="background-img" mode="aspectFill" />
-    
+    <view class="stage-container">
+        <image src="/img/stage.png" mode="" class="stage-img" />
+        <view class="stage-text-overlay">
+            <text>当前阶段</text>
+        </view>
+    </view>
     <view class="current-stage-module">
         <view class="stage-info">
             <text class="stage-label">当前阶段：</text>

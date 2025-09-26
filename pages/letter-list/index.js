@@ -27,7 +27,8 @@ Page({
     onShow() {
         // 页面显示时更新tabBar状态
         if (this.getTabBar && this.getTabBar()) {
-            this.getTabBar().switchTab(2);
+            const tabbar = this.getTabBar && this.getTabBar();
+            tabbar && tabbar.syncCurrentPage && tabbar.syncCurrentPage();
         }
     },
 

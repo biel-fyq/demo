@@ -1,19 +1,18 @@
 {
   "pages": [
-    "pages/index/index",
-    
-    "pages/movie/index",
+    "pages/home/index",
     "pages/my/index",
     "pages/barrier/index",
-    "pages/home/index",
-    "pages/letter/index",
     "pages/welcome/index",
-    "pages/kit/index",
-    "pages/rescue/index",
-    "pages/logs/index",
+
     
 
-
+    "pages/movie/index",
+    "pages/letter/index",
+    "pages/rescue/index",
+    "pages/kit/index",
+    "pages/logs/index",
+    "pages/index/index",
     "pages/reading/index",
     "pages/letter/view-letter/index",
     "pages/play-the-video/index",

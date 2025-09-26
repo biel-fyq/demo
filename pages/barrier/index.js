@@ -1,7 +1,8 @@
 Page({
   onShow() {
     if (this.getTabBar && this.getTabBar()) {
-      this.getTabBar().switchTab(1);
+      const tabbar = this.getTabBar && this.getTabBar();
+      tabbar && tabbar.syncCurrentPage && tabbar.syncCurrentPage();
     }
   },
 
@@ -26,7 +27,7 @@ Page({
   onLoad(options) {
 
   },
-  writeEvent(){
+  writeEvent() {
     wx.navigateTo({
       url: '/pages/wall/index',
     })
@@ -81,7 +82,7 @@ Page({
 
   }
   ,
-  navigateToDetail(e){
+  navigateToDetail(e) {
     const { category } = e.currentTarget.dataset;
     console.log('go to', category);
     // wx.navigateTo({ url: `/pages/detail/index?category=${encodeURIComponent(category)}` })

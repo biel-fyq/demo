@@ -1,7 +1,8 @@
 Page({
   onShow() {
     if (this.getTabBar && this.getTabBar()) {
-      this.getTabBar().switchTab(4);
+      const tabbar = this.getTabBar && this.getTabBar();
+      tabbar && tabbar.syncCurrentPage && tabbar.syncCurrentPage();
     }
   },
 

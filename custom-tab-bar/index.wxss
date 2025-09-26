@@ -32,7 +32,7 @@
   right: 0;
   top: 0;
   bottom: 0;
-  z-index: 2;
+  z-index: 999999;
   padding: 0 40rpx;
   display: flex;
   justify-content: space-around;
@@ -92,3 +92,38 @@
   width: 100%;
   background: #fff;
 }
+
+
+
+
+.tabbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 136rpx;
+  background: url("https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250926/Mask group_1758872172406.png");
+  background-size: 750rpx 222rpx;
+  z-index: 500;
+}
+.tab-item {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ 
+}
+.icon {
+  width: 24px;
+  height: 24px;
+}
+.label {
+  margin-top: 2px;
+  font-size: 12px;
+}
+

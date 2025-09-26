@@ -210,7 +210,7 @@
   height: 120rpx;
   height: 110rpx;
   background-color: #FFFFFF;
-  border: 1px solid #000000;
+  border: 2rpx solid #000000;
   border-radius: 50rpx;
   margin-top: 49rpx;
   display: flex;
