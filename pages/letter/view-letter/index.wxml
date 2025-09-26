@@ -1,4 +1,5 @@
 <view class="whisper-container">
+  <view class="background-blur"></view>
   <view class="frost-tint"></view>
   <view class="envelope">
     <view class="message-header">91天后的夏：</view>

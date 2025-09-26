@@ -1,62 +1,46 @@
-<view class="barrier-body">
+<view>
+  <!-- 安全距离 -->
   <view class="safe-top-spacer"></view>
-  <view class="barrier">
-    <view class="barrier-title">
-      <text class=" list">破碎清单</text>
-      <image class="pillImage" src="/img/20.png" mode="aspectFit"></image>
+  <view class="barrier-top">
+    <view class="top-content">
+      <view class="title">破碎清单</view>
+      <image src="/img/20.png" mode="" class="decorate-img" />
     </view>
-    <view class="barrier-title">
-      <text class="south—wall ">再见南墙</text>
-      <image class="pillImage" src="/img/20.png" mode="aspectFit"></image>
-    </view>
-  </view>
-  <view>
-    <!-- 破碎清单 -->
-    <!-- 当前结构可以保持，但建议外层再包裹一个定位容器，便于整体控制 -->
-<view class="list-body-img">
-  <!-- 你的图片 -->
-  <image src="https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250922/Mask group_1758545972700.png" mode="widthFix" class="list-img" />
-
-  <!-- 核心：标签叠加区域 -->
-  <view class="list-center-overlay">
-    <!-- 第一行：两个并排小标签 -->
-    <view class="tags-row">
-      <view class="tag-col" style="margin-left: -25rpx;">
-        <image src="/img/14.png" class="tag-col-img"></image>
-        <text class="tag-col-text">111111111</text>
-      </view>
-      <view class="tag-col">
-        <image src="/img/14.png" class="tag-col-img"></image>
-        <text class="tag-col-text">22222</text>
-      </view>
-    </view>
-
-    <!-- 第二行起：三个大标签，依次排列 -->
-    <view class="tag-col1">
-      <image src="/img/14.png" class="tag-col-img1"></image>
-      <text class="tag-col-text1">444444444</text>
-    </view>
-    <view class="tag-col2">
-      <image src="/img/14.png" class="tag-col-img2"></image>
-      <text class="tag-col-text2">77777777</text>
-    </view>
-    <view class="tag-col3">
-      <image src="/img/14.png" class="tag-col-img3"></image>
-      <text class="tag-col-text3">66666666</text>
+    <view class="top-content">
+      <view class="title">再见南墙</view>
+      <image src="/img/20.png" mode="" class="decorate-img" />
     </view>
   </view>
+  <view class="barrier-content">
+    <view class="barrier-content-bag-container">
+      <image src="https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250922/Mask group_1758545972700.png" mode="widthFix" class="barrier-content-bag" />
+    </view>
+    <view class="list-center-overlay">
+      <!-- 第一行：两个并排的小标签 -->
+      <view class="tags-row">
+        <view class="small-tag">
+          <image src="/img/14.png" class="small-tag-icon"></image>
+          <text class="small-tag-text">111111111</text>
+        </view>
+        <view class="small-tag">
+          <image src="/img/14.png" class="small-tag-icon"></image>
+          <text class="small-tag-text">22222</text>
+        </view>
+      </view>
 
-  <!-- 右下角固定徽章（已做安全区适配，可不动） -->
-  <image src="/img/南墙管理.png" class="nanqiang-badge-fixed" mode="widthFix" bindtap="writeEvent" />
-</view>
-
-    <!--  再见南墙 -->
-    <!-- <view class="nanqiang-section">
-      <image src="https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250923/e9989a41ea2a0ecafd312a91996f5b299f7687df_1758630718431.png" class="nanqian-bag" mode="widthFix"></image>
-      <view class="nanqiang-text">
-        想让你失望之后,我才能撞破那南墙,让你得以转世轮回。可人总是心存私念的,换取了什么,总会想再得到些什么。果然,我还是放心不下啊...你守护了我一辈子,这次,可不可以换我……
+      <!-- 第二行起：三个大标签，依次竖直排列 -->
+      <view class="large-tag">
+        <image src="/img/14.png" class="large-tag-icon"></image>
+        <text class="large-tag-text">444444444</text>
+      </view>
+      <view class="large-tag">
+        <image src="/img/14.png" class="large-tag-icon"></image>
+        <text class="large-tag-text">77777777</text>
+      </view>
+      <view class="large-tag">
+        <image src="/img/14.png" class="large-tag-icon"></image>
+        <text class="large-tag-text">66666666</text>
       </view>
     </view>
-    <image src="/img/南墙管理.png" class="nanqiang-badge-fixed" mode="widthFix" bindtap="writeEvent" /> -->
   </view>
 </view>

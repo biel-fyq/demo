@@ -1,24 +1,29 @@
 {
   "pages": [
-    "pages/write-name/index",
-    "pages/wall/index",
-    "pages/my/index",
-    "pages/catalogue/index",
+    "pages/index/index",
+    
     "pages/movie/index",
-    "pages/home/index",
-    "pages/letter/view-letter/index",
-    "pages/letter/index",
-    "pages/letter-list/index",
+    "pages/my/index",
     "pages/barrier/index",
+    "pages/home/index",
+    "pages/letter/index",
     "pages/welcome/index",
-    "pages/feedback/index",
-    "pages/reading/index",
-    "pages/play-the-video/index",
     "pages/kit/index",
     "pages/rescue/index",
     "pages/logs/index",
-    "pages/test/index",
-    "pages/index/index"
+    
+
+
+    "pages/reading/index",
+    "pages/letter/view-letter/index",
+    "pages/play-the-video/index",
+    "pages/letter-list/index",
+    "pages/catalogue/index",
+    "pages/feedback/index",
+    "pages/write-name/index",
+    "pages/wall/index"
+    
+    
   ],
   "tabBar": {
     "custom": true,

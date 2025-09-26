@@ -19,10 +19,9 @@
 	padding-bottom: env(safe-area-inset-bottom);
 }
 
-/* 顶部留白占位：固定高度 + 顶部安全区，避免内容被顶到最上方 */
 .safe-top-spacer {
-	height: calc(constant(safe-area-inset-top) + 160rpx);
-	height: calc(env(safe-area-inset-top) + 160rpx);
+  height: calc(88rpx + constant(safe-area-inset-top)); /* 旧，可省略 */
+  height: calc(88rpx + env(safe-area-inset-top));      /* 新，推荐 */
 	width: 100%;
 }
 

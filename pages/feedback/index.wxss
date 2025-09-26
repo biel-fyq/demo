@@ -1,12 +1,11 @@
 .feedback-page {
   min-height: 100vh;
   background: #F8F8F8;
-  padding-top: calc(200rpx + env(safe-area-inset-top));
-  padding-top: calc(200rpx + constant(safe-area-inset-top));
 }
 
+
 .content {
-  padding: 24rpx 32rpx 48rpx;
+  padding: 32rpx 32rpx 48rpx;
 }
 
 .label {
@@ -17,22 +16,20 @@
   font-style: Regular;
   line-height: 140%;
   letter-spacing: 0.3px;
-  /* margin-left: 30rpx; */
 }
 
 .input-card {
   margin-top: 16rpx;
   background: #fff;
   border-radius: 24rpx;
-  padding: 20rpx;
+  padding: 16rpx;
+  /* box-shadow: 0 4rpx 16rpx rgba(0,0,0,0.04); */
   position: relative;
-  margin-top: 40rpx;
 }
 
 .textarea {
-  width: 654rpx;
-  height: 600rpx;
-  border-radius: 24rpx;
+  width: 100%;
+  height: 420rpx;
   font-size: 28rpx;
   line-height: 1.6;
 }
@@ -48,6 +45,7 @@
   color: #999;
   font-size: 24rpx;
 }
+
 
 .confirm-btn {
   width: 320rpx !important;
@@ -69,9 +67,4 @@
 
 .confirm-btn[disabled] {
   opacity: 0.6;
-}
-
-.safe-bottom {
-  height: constant(safe-area-inset-bottom);
-  height: env(safe-area-inset-bottom);
 }

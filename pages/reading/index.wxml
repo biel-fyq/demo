@@ -1,4 +1,5 @@
 <view class="container">
+  <view class="safe-top-spacer"></view>
 <view style="width: 85vw;margin: 0 auto;">
   <!-- 动态标题 -->
   <view class="title">{{article.title}}</view>

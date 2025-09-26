@@ -1,4 +1,5 @@
 <view class="feedback-page">
+  <view class="safe-top-spacer"></view>
     <view class="content">
         <text class="label">写下您的意见</text>
         <view class="input-card">

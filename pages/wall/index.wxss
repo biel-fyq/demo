@@ -1,8 +1,6 @@
 .feedback-page {
-  min-height: 100vh;
   background: #F8F8F8;
-  padding-top: calc(200rpx + env(safe-area-inset-top));
-  padding-top: calc(200rpx + constant(safe-area-inset-top));
+  height: 100vh;
 }
 
 .content {
