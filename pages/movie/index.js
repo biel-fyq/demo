@@ -1,6 +1,9 @@
-// 保留一个 Page 定义即可
+const app = getApp();
+
 Page({
   data: {
+    StatusBar: app.globalData.StatusBar,
+
     currentIndex: 1, // 默认中间那张是选中
     showBookModal: false,
     selectedBook: {},

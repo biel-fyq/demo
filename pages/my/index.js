@@ -1,3 +1,5 @@
+const app = getApp();
+
 Page({
   onShow() {
     if (this.getTabBar && this.getTabBar()) {
@@ -10,6 +12,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    StatusBar: app.globalData.StatusBar,
+    
     meritoriousServiceImg: [
       "https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250922/0b38f0aef8009c93e7e5a3ed6c6e6f3427ed7491_1758553173851.png",
       "https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250922/0b38f0aef8009c93e7e5a3ed6c6e6f3427ed7491_1758553173851.png"
