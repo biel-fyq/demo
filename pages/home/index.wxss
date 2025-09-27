@@ -284,12 +284,10 @@ page {
 .calendar-day {
   height: 100%;
   border-radius: 20rpx;
-  background: rgba(255, 235, 150, 0.88);
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  box-shadow: 0 2rpx 0 rgba(0, 0, 0, 0.08);
 }
 
 .calendar-day text {
@@ -298,89 +296,80 @@ page {
   font-weight: 700;
 }
 
+/* 今天的日期文字样式 - 使用更高优先级的选择器 */
+.calendar-day text.calendar-nowday,
+.calendar-day .calendar-nowday,
+text.calendar-nowday {
+  color: #E04E47 !important;
+  font-size: 24rpx;
+  font-weight: 700;
+}
+
 .calendar-tick {
   position: absolute;
   right: 35rpx;
   bottom: 4rpx;
   font-size: 20rpx;
-  color: #e77;
+  color: #E04E47;
 }
 
-/* 连续块：让相邻项连成一条带，利用负边距覆盖网格间隙 */
-.group-a {
-  background: #fee699;
+/* 所有选中日期的勾勾都水平居中 */
+.calendar-day.checked .calendar-tick {
+  right: 50%;
+  transform: translateX(50%);
 }
 
-.group-b {
-  background: #fde28a;
-}
-
-.group-c {
-  background: #fbdc7a;
-}
-
+/* 被选中的日期基础样式 */
 .checked {
-  box-shadow: inset 0 0 0 3rpx #ffcc66;
+  border: 2rpx solid #ffcc66;
+  border-radius: 14rpx;
+  background-color: #fff;
+  box-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.1);
 }
 
-/* 把连续的块拼接起来：去掉中间圆角并用负 margin 覆盖左右间隙 */
+/* 分组背景色定义 */
+
+/* 所有选中的日期都保持独立样式 */
 .calendar-day.group-a,
 .calendar-day.group-b,
-.calendar-day.group-c {
-  border-radius: 0;
-}
-
-.calendar-day.start {
-  border-top-left-radius: 34rpx;
-  border-bottom-left-radius: 34rpx;
-  margin-right: -16rpx;
-}
-
-.calendar-day.mid {
-  margin-left: -16rpx;
-  margin-right: -16rpx;
-}
-
-.calendar-day.end {
-  border-top-right-radius: 34rpx;
-  border-bottom-right-radius: 34rpx;
-  margin-left: -16rpx;
-}
-
+.calendar-day.group-c,
+.calendar-day.group-d,
+.calendar-day.group-e,
 .calendar-day.single {
-  border-radius: 34rpx;
+  border-radius: 14rpx;
+  border: 2rpx solid #ffcc66;
+  box-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.1);
 }
 
-/* 组内元素去掉内嵌描边，避免拼接处出现细线 */
+/* 组内元素样式调整 - 让背景色显示 */
 .calendar-day.group-a.checked,
 .calendar-day.group-b.checked,
-.calendar-day.group-c.checked {
-  box-shadow: none;
+.calendar-day.group-c.checked,
+.calendar-day.group-d.checked,
+.calendar-day.group-e.checked {
+  box-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.1);
+  background-color: transparent;
 }
 
-/* 让连续的勾选日期连成带状，并在两端做圆角 */
+/* 所有分组使用相同的背景色 */
 .calendar-day.group-a,
 .calendar-day.group-b,
-.calendar-day.group-c {
-  border-radius: 0;
-}
-
-.calendar-day.start {
-  border-top-left-radius: 34rpx;
-  border-bottom-left-radius: 34rpx;
-}
-
-.calendar-day.end {
-  border-top-right-radius: 34rpx;
-  border-bottom-right-radius: 34rpx;
+.calendar-day.group-c,
+.calendar-day.group-d,
+.calendar-day.group-e {
+  background-image: linear-gradient(#FAE768 0%,#FFF1B5 100%);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 
 .calendar-day.single {
-  border-radius: 34rpx;
+  background-image: linear-gradient(#FAE768 0%,#FFF1B5 100%);
 }
 
+
 .today {
-  /* border: 3rpx solid #f25; */
+  border: 4rpx solid #E04E47;
+  border-radius: 25rpx;
 }
 
 .calendar-today-flag {
@@ -389,13 +378,13 @@ page {
   bottom: 4rpx;
   width: 30rpx;
   height: 30rpx;
-  border: 3rpx solid #f25;
+  border: 3rpx solid #E04E47;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 18rpx;
-  color: #f25;
+  color: #E04E47;
   background: #fff;
 }
 
@@ -477,16 +466,6 @@ page {
   width: 100%;
   display: block;
   border-radius: 24rpx;
-}
-
-.popup-title {
-  font-size: 48rpx;
-  font-weight: 800;
-}
-
-.popup-subtitle {
-  font-size: 40rpx;
-  font-weight: 700;
 }
 
 .confirm-btn {
