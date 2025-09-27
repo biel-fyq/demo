@@ -103,7 +103,6 @@ page {
   font-style: Regular;
   letter-spacing: 0%;
   text-align: center;
-
 }
 
 .brand-name {

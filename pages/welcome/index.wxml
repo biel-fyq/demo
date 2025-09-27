@@ -1,9 +1,7 @@
 <view>
-  <!-- 图标页面 - 第一个展示 -->
   <view class="icon-page" wx:if="{{showIconPage}}">
     <view class="flex-center-container">
-      <view class="circle-background"></view>
-      <image src="/img/1321314846.png" mode="aspectFit" class="centered-image" />
+      <image src="/img/32.png" mode="aspectFit" class="centered-image" />
     </view>
   </view>
   <!-- 欢迎页面 -->
@@ -32,8 +30,8 @@
     <view class="main-content">
       <view class="logo-section">
         <view class="flex-center-container">
-          <view class="circle-background"></view>
-          <image src="/img/1321314846.png" class="centered-image logo-image" mode="aspectFit" />
+          <!-- <view class="circle-background"></view> -->
+          <image src="/img/32.png" class="centered-image logo-image" mode="aspectFit" />
         </view>
       </view>
       <view class="welcome-text-login">

@@ -1,208 +1,213 @@
-
-
 .flex-center-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* 比如整个屏幕高度居中，可根据需求调整 */
-  }
-  
-  .circle-background {
-    position: relative;         
-    width: 268rpx;                
-    height: 268rpx; 
-    background-color: #F7F1EE;  
-    border-radius: 50%;
-   filter: blur(15px);
-  }
-  
-  .centered-image {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* 关键：图片居中 */
-    width: 268rpx;
-    height: 268rpx;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* 比如整个屏幕高度居中，可根据需求调整 */
+}
+
+
+.centered-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* 关键：图片居中 */
+  width: 268rpx;
+  height: 268rpx;
+}
 
 .welcome-container {
-    display: flex;
-    flex-direction: column;     /* 垂直排列：圆圈在上，文字在下 */
-    align-items: center;        /* 水平居中 */
-    justify-content: center;    /* 垂直居中（可选，根据需求） */
-    height: 50vh;              
-    box-sizing: border-box;
-  }
-  
-  .blur-circles-layer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0rpx;                
-  }
-  
-  .blur-circle {
-    border-radius: 50%;         
-    filter: blur(25rpx);         
-  }
-  
-  .circle-1 {
-    width: 222rpx;
-    height: 222rpx;
-    background-color: #E8F2F8;
-  }
-  
-  .circle-2 {
-    width: 222rpx;
-    height: 222rpx;
-    background-color: #E8F8F7;
-    margin-left: -50rpx;
-  }
-  
-  .circle-3 {
-    width: 268rpx;
-    height: 268rpx;
-    background-color: #F7F1EE;  
-    margin-left: -30rpx;
-  }
-  
-  .text-layer {
-    display: flex;
-    flex-direction: column;     
-    align-items: center;        
-    gap: 20rpx;     
-    transform: rotate(-45deg);             
-  }
-  
-  .text-item {
-    font-size: 42rpx;
-    color: #000000;             
-    text-align: center;
-    font-weight: 400; 
-    font-family: ZCOOL QingKe HuangYou;          
-  }
+  display: flex;
+  flex-direction: column;
+  /* 垂直排列：圆圈在上，文字在下 */
+  align-items: center;
+  /* 水平居中 */
+  justify-content: center;
+  /* 垂直居中（可选，根据需求） */
+  height: 50vh;
+  box-sizing: border-box;
+}
 
-  .text-layer {
-    display: flex;
-    flex-direction: column;     
-    align-items: center;        
-    gap: 30rpx;  /* 加大间距，让文字更舒展 */
-    transform: rotate(-45deg);             
-    width: 80%;  /* 限制宽度，避免在大屏上过宽 */
-    margin: 0 auto; /* 水平居中 */
-  }
-  
-  .text-item {
-    font-size: 42rpx;
-    color: #000000;             
-    text-align: center;
-    font-weight: 400; 
-    font-family: ZCOOL QingKe HuangYou; 
-  }
-  
-  .title {
-    font-size: 48rpx; /* 让“欢迎来到”稍大一点 */
-  }
-  
-  .main-title {
-    font-size: 60rpx; /* 让“ResetDays”更突出 */
-    font-weight: 500; /* 也可以加粗 */
-  }
-  
-  .subtitle {
-    font-size: 36rpx; /* 让“请相信没人会来”稍小 */
-    /* 如果需要倾斜/微调位置，也可以单独加 transform */
-    /* transform: translateY(5rpx); */
-  }
+.blur-circles-layer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0rpx;
+}
 
-  
+.blur-circle {
+  border-radius: 50%;
+  filter: blur(25rpx);
+}
 
-  /* 整体容器 */
+.circle-1 {
+  width: 222rpx;
+  height: 222rpx;
+  background-color: #E8F2F8;
+}
+
+.circle-2 {
+  width: 222rpx;
+  height: 222rpx;
+  background-color: #E8F8F7;
+  margin-left: -50rpx;
+}
+
+.circle-3 {
+  width: 268rpx;
+  height: 268rpx;
+  background-color: #F7F1EE;
+  margin-left: -30rpx;
+}
+
+.text-layer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20rpx;
+  transform: rotate(-45deg);
+}
+
+.text-item {
+  font-size: 42rpx;
+  color: #000000;
+  text-align: center;
+  font-weight: 400;
+  font-family: ZCOOL QingKe HuangYou;
+}
+
+.text-layer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30rpx;
+  /* 加大间距，让文字更舒展 */
+  transform: rotate(-45deg);
+  width: 80%;
+  /* 限制宽度，避免在大屏上过宽 */
+  margin: 0 auto;
+  /* 水平居中 */
+}
+
+.text-item {
+  font-size: 42rpx;
+  color: #000000;
+  text-align: center;
+  font-weight: 400;
+  font-family: ZCOOL QingKe HuangYou;
+}
+
+.title {
+  font-size: 48rpx;
+  /* 让“欢迎来到”稍大一点 */
+}
+
+.main-title {
+  font-size: 60rpx;
+  /* 让“ResetDays”更突出 */
+  font-weight: 500;
+  /* 也可以加粗 */
+}
+
+.subtitle {
+  font-size: 36rpx;
+  /* 让“请相信没人会来”稍小 */
+  /* 如果需要倾斜/微调位置，也可以单独加 transform */
+  /* transform: translateY(5rpx); */
+}
+
+
+
+/* 整体容器 */
 .login-container {
-    width: 100vw;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* 垂直居中 */
-    align-items: center; /* 水平居中 */
-    background-color: #ffffff;
-  }
-  
- 
-  /* 表单容器 */
-  .form-container {
-    width: 80%;
-    max-width: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  /* 用户信息区域 */
-  .userinfo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-  
-  /* 头像样式 */
-  .userinfo-avatar {
-    overflow: hidden;
-    width: 128rpx;
-    height: 128rpx;
-    margin: 20rpx;
-    border-radius: 50%;
-  }
-  
-  .avatar-wrapper {
-    padding: 0;
-    width: 56px !important;
-    border-radius: 8px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-  }
-  
-  .avatar {
-    display: block;
-    width: 56px;
-    height: 56px;
-  }
-  
-  /* 昵称输入区域 */
-  .nickname-wrapper {
-    display: flex;
-    width: 100%;
-    padding: 16px;
-    box-sizing: border-box;
-    border-top: .5px solid rgba(0, 0, 0, 0.1);
-    border-bottom: .5px solid rgba(0, 0, 0, 0.1);
-    color: black;
-    margin-bottom: 40rpx;
-  }
-  
-  .nickname-label {
-    width: 105px;
-    font-size: 30rpx;
-  }
-  
-  .nickname-input {
-    flex: 1;
-    font-size: 30rpx;
-  }
-  
-  .confirm-button {
-    margin-top: 40rpx;
-    width: 100%;
-    height: 90rpx;
-    line-height: 90rpx;
-    background-color: #54DD67;
-    color: white;
-    font-size: 32rpx;
-    border-radius: 45rpx;
-    text-align: center;
-    padding: 0;
-  }
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* 垂直居中 */
+  align-items: center;
+  /* 水平居中 */
+  background-color: #ffffff;
+}
+
+
+/* 表单容器 */
+.form-container {
+  width: 80%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 用户信息区域 */
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* 头像样式 */
+.userinfo-avatar {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.avatar-wrapper {
+  padding: 0;
+  width: 56px !important;
+  border-radius: 8px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.avatar {
+  display: block;
+  width: 56px;
+  height: 56px;
+}
+
+/* 昵称输入区域 */
+.nickname-wrapper {
+  display: flex;
+  width: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+  border-top: .5px solid rgba(0, 0, 0, 0.1);
+  border-bottom: .5px solid rgba(0, 0, 0, 0.1);
+  color: black;
+  margin-bottom: 40rpx;
+}
+
+.nickname-label {
+  width: 105px;
+  font-size: 30rpx;
+}
+
+.nickname-input {
+  flex: 1;
+  font-size: 30rpx;
+}
+
+.confirm-button {
+  margin-top: 40rpx;
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  background-color: #54DD67;
+  color: white;
+  font-size: 32rpx;
+  border-radius: 45rpx;
+  text-align: center;
+  padding: 0;
+}
+
 /* 
   .welcome-container-img1 {
       width: 222rpx;
@@ -220,12 +225,15 @@
 /* 页面整体容器 */
 .login-page {
   width: 100%;
-  height: 100vh; /* 占满屏幕高度 */
+  height: 100vh;
+  /* 占满屏幕高度 */
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* 垂直居中 */
-  align-items: center;     /* 水平居中 */
+  justify-content: center;
+  /* 垂直居中 */
+  align-items: center;
+  /* 水平居中 */
   overflow: hidden;
 }
 
@@ -244,9 +252,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 200rpx;
-  width: 268rpx;
-  height: 268rpx;
+  margin-bottom: 128rpx;
 }
 
 /* 新布局：用于包裹圆形背景和居中图片 */
@@ -259,20 +265,6 @@
   height: 268rpx;
 }
 
-/* 圆形背景装饰层 */
-.circle-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #F7F1EE; /* 你可以修改成任意你喜欢的背景色，如 #FFF0F0, #FDF5EE */
-  border-radius: 50%; /* 圆形 */
-  /* 可选：模糊或透明度，按需启用*/
-  filter: blur(8px); 
-  opacity: 0.9;
-  z-index: 1; /* 在底层 */
-}
 
 /* 居中的 Logo 图片，放在背景之上 */
 .centered-image {
@@ -280,9 +272,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 147rpx;
-  height: 197rpx;
-  z-index: 2; /* 在背景之上 */
+  width: 480rpx;
+  height: 480rpx;
+  z-index: 2;
 }
 
 /* 保留你原来的 logo-image 类（可用于统一管理或动画） */
@@ -292,18 +284,23 @@
 }
 
 
-
 .welcome-text-login {
-  margin-bottom: 120rpx;
-    text-align: center;
-    animation: welcomeTextFadeIn 1s ease-in-out 0.6s both;
+  /* margin-bottom: 120rpx; */
+  margin-bottom: 128rpx;
+  text-align: center;
+  animation: welcomeTextFadeIn 1s ease-in-out 0.6s both;
 }
 
 .welcome-title-login {
-  font-size: 36rpx;
+  font-size: 48rpx;
   font-weight: bold;
   color: #000000;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: MiSans;
+  font-weight: 700;
+  font-style: Bold;
+  line-height: 160%;
+  letter-spacing: 0px;
+  text-align: center;
 }
 
 /* 欢迎文字区域 */
@@ -358,8 +355,17 @@
 }
 
 .wechat-icon {
-  width: 40rpx;
-  height: 40rpx;
+  width: 34rpx;
+  height: 34rpx;
+}
+
+.btn-text {
+  font-family: PingFang SC;
+  font-weight: 500;
+  font-size: 30rpx;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: center;
 }
 
 /* 取消按钮 */
@@ -384,6 +390,7 @@
     opacity: 0;
     transform: scale(0.8);
   }
+
   100% {
     opacity: 1;
     transform: scale(1);
@@ -395,6 +402,7 @@
     opacity: 0;
     transform: translateY(30rpx);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -406,6 +414,7 @@
     opacity: 0;
     transform: translateY(50rpx);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -469,9 +478,11 @@ page {
   flex: 1;
   width: 222rpx;
   height: 222rpx;
+  border-radius: 50%;
   background: #E8F2F8;
-  filter: blur(25px);
+  filter: blur(50rpx);
   backdrop-filter: blur(0rpx);
+  margin-left: 60rpx;
 }
 
 .fog-center {
@@ -489,6 +500,7 @@ page {
   height: 268rpx;
   background: #F7F1EE;
   filter: blur(25px);
+  margin-right: 30rpx;
 }
 
 .circle-container {
@@ -513,26 +525,40 @@ page {
   color: #000000;
   letter-spacing: 2rpx;
   text-align: center;
+  font-family: ZCOOL QingKe HuangYou;
+  font-weight: 400;
+  font-style: Regular;
+  letter-spacing: 0%;
+  text-align: center;
 }
 
 .brand-name {
   display: block;
   font-size: 90rpx;
-  font-weight: 900;
+  font-weight: 700;
   color: #000000;
-  margin-bottom: 15rpx;
-  letter-spacing: 4rpx;
-  text-align: center;
+  letter-spacing: 10rpx;
+  width: 428rpx;
+  height: 74rpx;
+  margin: 0 auto;
 }
 
 .subtitle {
   display: block;
-  font-size: 40rpx;
   font-weight: 600;
   color: #000000;
   letter-spacing: 2rpx;
   text-align: end;
+  font-family: ZCOOL QingKe HuangYou;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 40rpx;
+  line-height: 48rpx;
+  letter-spacing: 0%;
+  text-align: right;
+  margin-top: 50rpx;
 }
+
 
 .inspirational-text {
   text-align: center;
