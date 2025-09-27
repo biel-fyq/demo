@@ -3,7 +3,7 @@ Component({
     ready: function() {
       const pages = getCurrentPages()
       if (pages.length > 0) {
-        const index = this.data.list.findIndex(({ pagePath }) => pagePath.endsWith(pages[0]?.route))
+        const index = this.data.items.findIndex(({ pagePath }) => pagePath.endsWith(pages[0]?.route))
         this.setData({ selected: index})
       }
     },
@@ -13,7 +13,7 @@ Component({
     color: '#666',
     activeColor: '#1989fa',
     // 与 app.json 的 tabBar.list 完全一致（带前导 /）
-    list: [
+    items: [
       { pagePath: '/pages/home/index', text: '新生', iconPath: '/img/icon/1.png', selectedIconPath: '/img/icon/1.png' },
       { pagePath: '/pages/barrier/index', text: '结界', iconPath: '/img/icon/2.png', selectedIconPath: '/img/icon/2.png' },
       { pagePath: '/pages/letter/index', text: '信签', iconPath: '/img/icon/3.png', selectedIconPath: '/img/icon/3.png' },
@@ -31,10 +31,10 @@ Component({
       if (typeof index !== 'number')
         return
 
-      if (index > this.data.list.length)
+      if (index > this.data.items.length)
         return
 
-      wx.switchTab({ url: this.data.list[index]?.pagePath });
+      wx.switchTab({ url: this.data.items[index]?.pagePath });
     }
   }
 });
