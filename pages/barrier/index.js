@@ -1,3 +1,5 @@
+const app = getApp();
+
 Page({
   onShow() {
     if (this.getTabBar && this.getTabBar()) {
@@ -10,6 +12,9 @@ Page({
    * 页面的初始数据
    */
   data: {
+    StatusBar: app.globalData.StatusBar,
+    CustomBar: app.globalData.CustomBar,
+
     tags: [
       '狂妄自大', '毒蛇且温柔', '拾杠艺术家', '中二病患者', '铁憨憨'
     ],

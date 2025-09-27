@@ -1,5 +1,4 @@
 <view>
-  <view class="safe-top-spacer"></view>
   <view>
     <view class="frost-tint"></view>
     <image src="https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250924/logo_1758704246674.png" class="logo" style="padding-top:{{StatusBar}}px;"></image>

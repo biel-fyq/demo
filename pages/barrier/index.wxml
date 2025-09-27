@@ -1,46 +1,46 @@
 <view>
-  <!-- 安全距离 -->
-  <view class="safe-top-spacer"></view>
-  <view class="barrier-top">
-    <view class="top-content">
-      <view class="title">破碎清单</view>
-      <image src="/img/20.png" mode="" class="decorate-img" />
-    </view>
-    <view class="top-content">
-      <view class="title">再见南墙</view>
-      <image src="/img/20.png" mode="" class="decorate-img" />
-    </view>
-  </view>
-  <view class="barrier-content">
-    <view class="barrier-content-bag-container">
-      <image src="https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250922/Mask group_1758545972700.png" mode="widthFix" class="barrier-content-bag" />
-    </view>
-    <view class="list-center-overlay">
-      <!-- 第一行：两个并排的小标签 -->
-      <view class="tags-row">
-        <view class="small-tag">
-          <image src="/img/14.png" class="small-tag-icon"></image>
-          <text class="small-tag-text">111111111</text>
-        </view>
-        <view class="small-tag">
-          <image src="/img/14.png" class="small-tag-icon"></image>
-          <text class="small-tag-text">22222</text>
-        </view>
+  <image src="https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250924/logo_1758704246674.png" class="logo" style="padding-top:{{StatusBar}}px;"></image>
+  <view style="padding-top:{{CustomBar}}px;">
+    <view class="barrier-top">
+      <view class="top-content">
+        <view class="title">破碎清单</view>
+        <image src="/img/20.png" mode="widthFix" class="decorate-img" />
       </view>
+      <view class="top-content">
+        <view class="title">再见南墙</view>
+        <image src="/img/20.png" mode="widthFix" class="decorate-img" />
+      </view>
+    </view>
+    <view class="barrier-content">
+      <view class="barrier-content-bag-container">
+        <text class="barrier-content-bag-title">雪山下的老黑</text>
+        <image src="https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250922/Mask group_1758545972700.png" mode="widthFix" class="barrier-content-bag" />
+      </view>
+      <view class="list-center-overlay">
+        <!-- 第一行：两个并排的小标签 -->
+        <view class="tags-row">
+          <view class="small-tag">
+            <text class="small-tag-text">狂妄自大</text>
+          </view>
+          <view class="small-tag">
+            <text class="small-tag-text">22222</text>
+          </view>
+        </view>
 
-      <!-- 第二行起：三个大标签，依次竖直排列 -->
-      <view class="large-tag">
-        <image src="/img/14.png" class="large-tag-icon"></image>
-        <text class="large-tag-text">444444444</text>
-      </view>
-      <view class="large-tag">
-        <image src="/img/14.png" class="large-tag-icon"></image>
-        <text class="large-tag-text">77777777</text>
-      </view>
-      <view class="large-tag">
-        <image src="/img/14.png" class="large-tag-icon"></image>
-        <text class="large-tag-text">66666666</text>
+        <!-- 第二行起：三个大标签，依次竖直排列 -->
+        <view>
+          <view class="large-tag">
+            <text class="large-tag-text">444444444</text>
+          </view>
+          <view class="large-tag">
+            <text class="large-tag-text">77777777</text>
+          </view>
+          <view class="large-tag">
+            <text class="large-tag-text">66666666</text>
+          </view>
+        </view>
       </view>
     </view>
+    <button class="clear-button" style="width: 194rpx; margin-left: 88rpx;"></button>
   </view>
 </view>
