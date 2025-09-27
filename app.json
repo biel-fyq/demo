@@ -16,8 +16,7 @@
     "pages/catalogue/index",
     "pages/feedback/index",
     "pages/write-name/index",
-    "pages/wall/index",
-    "pages/test/tabDemo"
+    "pages/wall/index"
   ],
   "tabBar": {
     "custom": true,

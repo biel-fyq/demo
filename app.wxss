@@ -27,31 +27,12 @@
 }
 
 .logo {
-  width: 164rpx;
+  width: 163rpx;
   height: 64rpx;
   position: fixed;
-  top: calc(0rpx + constant(safe-area-inset-top));
-  top: calc(0rpx + env(safe-area-inset-top));
-  left: 96rpx;
+  left: 44rpx;
   z-index: 10;
   /* 添加最小顶部距离，确保在非刘海屏设备上也有合适位置 */
-}
-
-/* 针对不同设备的适配 */
-@media screen and (max-width: 375px) {
-  .logo {
-    width: 140rpx;
-    height: 56rpx;
-    left: 32rpx;
-  }
-}
-
-@media screen and (min-width: 414px) {
-  .logo {
-    width: 180rpx;
-    height: 70rpx;
-    left: 60rpx;
-  }
 }
 
 

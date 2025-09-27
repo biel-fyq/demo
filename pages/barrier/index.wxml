@@ -1,46 +1,59 @@
 <view>
-  <image src="https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250924/logo_1758704246674.png" class="logo" style="padding-top:{{StatusBar}}px;"></image>
-  <view style="padding-top:{{CustomBar}}px;">
-    <view class="barrier-top">
-      <view class="top-content">
-        <view class="title">破碎清单</view>
-        <image src="/img/20.png" mode="widthFix" class="decorate-img" />
-      </view>
-      <view class="top-content">
-        <view class="title">再见南墙</view>
+  <image src="https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250924/logo_1758704246674.png" class="logo" style="top:{{StatusBar}}px;"></image>
+  <view class="container" style="padding-top:{{CustomBar}}px;">
+    <view class="barrier-top tab-bar">
+      <view
+        wx:for="{{tabs}}"
+        wx:key="index"
+        class="top-content tab-item {{currentTab == index ? 'tab-active' : ''}}"
+        bindtap="switchTab"
+        data-index="{{index}}"
+      >
+        <view class="title">{{item}}</view>
         <image src="/img/20.png" mode="widthFix" class="decorate-img" />
       </view>
     </view>
-    <view class="barrier-content">
-      <view class="barrier-content-bag-container">
-        <text class="barrier-content-bag-title">雪山下的老黑</text>
-        <image src="https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250922/Mask group_1758545972700.png" mode="widthFix" class="barrier-content-bag" />
-      </view>
-      <view class="list-center-overlay">
-        <!-- 第一行：两个并排的小标签 -->
-        <view class="tags-row">
-          <view class="small-tag">
-            <text class="small-tag-text">狂妄自大</text>
-          </view>
-          <view class="small-tag">
-            <text class="small-tag-text">22222</text>
+    <view class="content-container">
+      <view 
+        class="content-wrapper"
+        style="transform: translateX(-{{currentTab * 100}}%); transition: transform 300ms ease-out;"
+      >
+        <view class="content-item">
+          <view
+            wx:if="{{currentTab == 0}}"
+            class="animated-content"
+            style="animation: rotateIn 400ms ease-out forwards;"
+          >
+            <view class="barrier-content">
+              <view class="barrier-content-bag-container">
+                <text class="barrier-content-bag-title">雪山下的老黑</text>
+                <image src="https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250922/Mask group_1758545972700.png" mode="widthFix" class="barrier-content-bag" />
+              </view>
+              <view class="list-center-overlay">
+                <view wx:for="{{tags}}" wx:key="index" class="tag-item">
+                  <text class="tag-text">{{item}}</text>
+                </view>
+              </view>
+            </view>
+            <button class="clear-button" style="width: 194rpx; margin-left: 88rpx;"bindtap="navigateToDetail"></button>
           </view>
         </view>
-
-        <!-- 第二行起：三个大标签，依次竖直排列 -->
-        <view>
-          <view class="large-tag">
-            <text class="large-tag-text">444444444</text>
-          </view>
-          <view class="large-tag">
-            <text class="large-tag-text">77777777</text>
-          </view>
-          <view class="large-tag">
-            <text class="large-tag-text">66666666</text>
+        <view class="content-item">
+          <view
+            wx:if="{{currentTab == 1}}"
+            class="animated-content"
+            style="animation: rotateIn 400ms ease-out forwards;"
+          >
+            <view class="wall-content">
+              <image src="/img/wall.png" mode="widthFix" class="bg-wall"/>
+              <view class="text-content">
+                <text>想让你失望之后,我才能撞破那南墙,让你得以转世轮回.可人总是心存私念的,换取了什么,总会想再得到些什么.果然,我还是放心不下啊...你守护了我一辈子,这次,可不可以换我……</text>
+              </view>
+              <button class="clear-button" style="width: 194rpx; margin-left: 64rpx;" bindtap="navigateToWall"></button>
+            </view>
           </view>
         </view>
       </view>
     </view>
-    <button class="clear-button" style="width: 194rpx; margin-left: 88rpx;"></button>
   </view>
 </view>

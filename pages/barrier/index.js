@@ -1,13 +1,6 @@
 const app = getApp();
 
 Page({
-  onShow() {
-    if (this.getTabBar && this.getTabBar()) {
-      const tabbar = this.getTabBar && this.getTabBar();
-      tabbar && tabbar.syncCurrentPage && tabbar.syncCurrentPage();
-    }
-  },
-
   /**
    * 页面的初始数据
    */
@@ -15,6 +8,8 @@ Page({
     StatusBar: app.globalData.StatusBar,
     CustomBar: app.globalData.CustomBar,
 
+    currentTab: 0,
+    tabs: ['破碎清单', '再见南墙'],
     tags: [
       '狂妄自大', '毒蛇且温柔', '拾杠艺术家', '中二病患者', '铁憨憨'
     ],
@@ -88,8 +83,22 @@ Page({
   }
   ,
   navigateToDetail(e) {
-    const { category } = e.currentTarget.dataset;
-    console.log('go to', category);
+    // const { category } = e.currentTarget.dataset;
+    // console.log('go to', category);
     // wx.navigateTo({ url: `/pages/detail/index?category=${encodeURIComponent(category)}` })
-  }
+    wx.navigateTo({ url: `/pages/detail/index` })
+  },
+
+  navigateToWall() {
+    wx.navigateTo({ url: `/pages/wall/index` })
+  },
+
+  switchTab(e) {
+    const index = e.currentTarget.dataset.index;
+    if (this.data.currentTab !== index) {
+      this.setData({
+        currentTab: index
+      });
+    }
+  },
 })
