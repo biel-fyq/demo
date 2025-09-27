@@ -66,7 +66,7 @@
               <block wx:for="{{calendarGrid}}" wx:key="index">
                 <view class="calendar-cell {{item.type}}" data-index="{{index}}">
                   <view wx:if="{{item.type==='day'}}" class="calendar-day {{item.groupClass}} {{item.checked? 'checked' : ''}} {{item.isToday? 'today' : ''}}">
-                    <text>{{item.isToday?'今':item.day}}</text>
+                    <text class="{{item.isToday ? 'calendar-nowday' : ''}}">{{item.isToday?'今':item.day}}</text>
                     <view wx:if="{{item.checked}}" class="calendar-tick">✓</view>
                   </view>
                 </view>

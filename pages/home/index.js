@@ -51,7 +51,7 @@ Page({
     }
 
     // 2) 为每个打勾的日期打上分组颜色与角色（start/mid/end/single）
-    const colors = ['group-a', 'group-b', 'group-c'];
+    const colors = ['group-a', 'group-b', 'group-c', 'group-d', 'group-e'];
     const dayToGroup = new Map();
     groups.forEach((arr, gi) => {
       const colorCls = colors[gi % colors.length];

@@ -1,11 +1,11 @@
 {
   "pages": [
-    "pages/my/index",
-    "pages/home/index",
+    
     "pages/welcome/index",
-    
     "pages/barrier/index",
-    
+
+    "pages/home/index",
+    "pages/my/index",
     "pages/movie/index",
     "pages/letter/index",
     "pages/rescue/index",
