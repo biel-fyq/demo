@@ -63,9 +63,8 @@
   width: 706rpx;
   height: 140rpx !important;
 	left: 50%;
-	bottom: -200rpx;
+	bottom: -50rpx;
   transform: translateX(-50%);
- 
 }
 
 .meritorious-service {
@@ -80,7 +79,7 @@
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
-	bottom: -140rpx;
+	bottom: 0rpx;
 	display: flex;
   gap: 150rpx;
 	align-items: center;

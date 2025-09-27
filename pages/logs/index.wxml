@@ -1,9 +1,14 @@
 <view class="welcome-page">
-  <!-- <view class="fog-background">
+<view>
+</view>
+<view>
+<!-- <image src="/img/welcome.png" class="welcome-page-bag"></image> -->
+</view>
+  <view class="fog-background">
     <view class="fog-cloud fog-left"></view>
     <view class="fog-cloud fog-center"></view>
     <view class="fog-cloud fog-right"></view>
-  </view> -->
+  </view>
   <view class="main-content">
     <view class="welcome-text">
       <text class="welcome-title">欢迎来到</text>

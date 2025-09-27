@@ -1,17 +1,16 @@
 {
   "pages": [
-    "pages/home/index",
     "pages/my/index",
-    "pages/barrier/index",
+    "pages/home/index",
     "pages/welcome/index",
-
     
-
+    "pages/barrier/index",
+    
     "pages/movie/index",
     "pages/letter/index",
     "pages/rescue/index",
     "pages/kit/index",
-    "pages/logs/index",
+    
     "pages/index/index",
     "pages/reading/index",
     "pages/letter/view-letter/index",

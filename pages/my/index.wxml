@@ -1,33 +1,36 @@
 <view class="my-body">
-	<!-- 顶部背景 + 底部徽章 -->
+  <!-- 顶部背景 + 底部徽章 -->
   <image src="https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250924/logo_1758704246674.png" alt="" class="logo" />
-	<view class="hero">
-		<image class="hero-bg" src="https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250922/0b38f0aef8009c93e7e5a3ed6c6e6f3427ed7491_1758553173851.png" mode="aspectFill"></image>
-		<!-- 背景图上居中的头像 -->
-		<image class="hero-avatar" src="https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250922/0b38f0aef8009c93e7e5a3ed6c6e6f3427ed7491_1758553173851.png" mode="aspectFill" />
-		<image class="hero-badge" src="https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250922/Group 1321314984_1758553321032.png" mode="widthFix"></image>
-		<!-- 左侧功勋图片，贴近徽章左侧 -->
-		<image src="/img/4.png" mode="widthFix" class="meritorious-service" />
-		<!-- 徽章上方的圆形头像列表 -->
-		<view class="badge-avatars">
-			<block wx:for="{{meritoriousServiceImg}}" wx:key="index">
-				<image class="avatar-item" src="{{item}}" mode="aspectFill" />
-			</block>
-		</view>
-	</view>
-	<!-- 下面可以放按钮等内容 -->
-	<view class="my-actions">
-		<button class="my-btn" bind:tap="onLogoutTap">退出登录</button>
-		<button class="my-btn" bind:tap="feedBackSub">意见反馈</button>
-	</view>
-	<!-- 退出确认弹窗 -->
-	<view wx:if="{{showLogoutConfirm}}" class="modal-mask">
-		<view class="modal">
-			<view class="modal-title">确定退出吗？</view>
-			<view class="modal-actions">
-				<button class="modal-btn ghost" bindtap="onCancelLogout">点错了</button>
-				<button class="modal-btn primary" bindtap="onConfirmLogout">确定</button>
-			</view>
-		</view>
-	</view>
+  <view class="hero">
+    <image class="hero-bg" src="https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250922/0b38f0aef8009c93e7e5a3ed6c6e6f3427ed7491_1758553173851.png" mode="aspectFill"></image>
+    <!-- 背景图上居中的头像 -->
+    <image class="hero-avatar" src="https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250922/0b38f0aef8009c93e7e5a3ed6c6e6f3427ed7491_1758553173851.png" mode="aspectFill" />
+    <view>
+      <image class="hero-badge" src="https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250922/Group 1321314984_1758553321032.png" mode="widthFix"></image>
+      <!-- 徽章上方的圆形头像列表 -->
+      <view class="badge-avatars">
+        <block wx:for="{{meritoriousServiceImg}}" wx:key="index">
+          <image class="avatar-item" src="{{item}}" mode="aspectFill" />
+        </block>
+      </view>
+    </view>
+    <!-- 左侧功勋图片，贴近徽章左侧 -->
+    <image src="/img/4.png" mode="widthFix" class="meritorious-service" />
+
+  </view>
+  <!-- 下面可以放按钮等内容 -->
+  <view class="my-actions">
+    <button class="my-btn" bind:tap="onLogoutTap">退出登录</button>
+    <button class="my-btn" bind:tap="feedBackSub">意见反馈</button>
+  </view>
+  <!-- 退出确认弹窗 -->
+  <view wx:if="{{showLogoutConfirm}}" class="modal-mask">
+    <view class="modal">
+      <view class="modal-title">确定退出吗？</view>
+      <view class="modal-actions">
+        <button class="modal-btn ghost" bindtap="onCancelLogout">点错了</button>
+        <button class="modal-btn primary" bindtap="onConfirmLogout">确定</button>
+      </view>
+    </view>
+  </view>
 </view>

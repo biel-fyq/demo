@@ -32,6 +32,11 @@ page {
   width: 100%;
   z-index: 5;
   position: relative;
+  
+}
+.welcome-page-bag {
+  /* width: 622rpx;
+  height: 268rpx; */
 }
 
 .fog-cloud {
@@ -43,9 +48,11 @@ page {
   flex: 1;
   width: 222rpx;
   height: 222rpx;
+  border-radius: 50%;
   background: #E8F2F8;
-  filter: blur(25px);
+  filter: blur(50rpx);
   backdrop-filter: blur(0rpx);
+  margin-left: 60rpx;
 }
 
 .fog-center {
@@ -63,6 +70,7 @@ page {
   height: 268rpx;
   background: #F7F1EE;
   filter: blur(25px);
+  margin-right: 30rpx;
 }
 
 .circle-container {
@@ -78,6 +86,9 @@ page {
   transform: rotate(-14deg);
   margin-bottom: 100rpx;
   width: 80%;
+  /* background: url('https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250926/welcome_1758882191799.png');
+  background-size: cover;
+  background-position: center 20%; */
 }
 
 .welcome-title {
