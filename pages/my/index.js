@@ -13,6 +13,7 @@ Page({
    */
   data: {
     StatusBar: app.globalData.StatusBar,
+    CustomBar: app.globalData.CustomBar,
     
     meritoriousServiceImg: [
       "https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250922/0b38f0aef8009c93e7e5a3ed6c6e6f3427ed7491_1758553173851.png",

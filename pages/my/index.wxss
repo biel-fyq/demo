@@ -1,25 +1,19 @@
 .my-body {
 	width: 100vw;
 	height: 100vh;
-	background-image: url('https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250922/2165d0b79a51b39d0e9847cb20859dc85814f8fb_1758541342328.jpg');
-	background-size: cover;  
-	background-position: center;
 	position: relative;
+	background: center/cover url('https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250922/2165d0b79a51b39d0e9847cb20859dc85814f8fb_1758541342328.jpg');
+		
 }
 
 /* 渐变模糊遮罩层 */
 .my-body::before {
 	content: '';
 	position: absolute;
-	top: 0;
+	top: 478rpx;
 	left: 0;
 	right: 0;
 	bottom: 0;
-	/* background: linear-gradient(to top, 
-		white 15%,
-		white 10%,
-		transparent 80%
-  ); */
   background: linear-gradient(180deg, rgba(248, 248, 248, 0) -2.38%, rgba(248, 248, 248, 0.8) 39.29%, rgba(248, 248, 248, 0.85) 43.63%, rgba(248, 248, 248, 0.9) 47.97%, rgba(248, 248, 248, 0.95) 65.31%, #F8F8F8 100%);
 	z-index: 1;
 }
@@ -33,29 +27,63 @@
 
 /* 顶部背景 + 底部徽章 */
 .hero {
-    position: relative;
-    width: 100vw;
-    left: 50%;
-    transform: translateX(-50%);
-    height: calc(100vw + constant(safe-area-inset-top));
-    height: calc(100vw + env(safe-area-inset-top));
-    overflow: visible;
+	position: relative;
+	width: 100vw;
+	left: 50%;
+	transform: translateX(-50%);
+	height: calc(100vw + constant(safe-area-inset-top));
+	height: calc(100vw + env(safe-area-inset-top));
+	overflow: hidden;
+	background: -72rpx bottom/ 1274rpx 850rpx url("https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250922/0b38f0aef8009c93e7e5a3ed6c6e6f3427ed7491_1758553173851.png");
 }
 
 .hero-bg {
-    width: 1150rpx;
-    height: 800rpx;
+	width: 1274rpx;
+	height: 850rpx;
+	margin-left: -72rpx;
+	position: absolute;
+	bottom: 0;
 }
 
-.hero-avatar {
+.user-info {
 	position: absolute;
-	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	bottom: 308rpx;
+	transform: translateX(-50%);
+}
+
+.user-info .hero-avatar {
 	width: 180rpx;
 	height: 180rpx;
   border-radius: 50%;
-  border: 4rpx solid #FED24B;
+	border: 4rpx solid #FED24B;
+}
+
+.user-info .user-name-wrapper {
+	display: flex;
+	gap: 16rpx;
+	padding-right: 14rpx;
+}
+
+.user-name-wrapper .user-name-text {
+	flex: 1;
+	width: 0;
+	text-align: right;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	font-family: MiSans;
+	font-weight: 600;
+	font-style: Semibold;
+	font-size: 32rpx;
+	line-height: 48rpx;
+	letter-spacing: 0px;
+}
+
+.user-name-wrapper .edit-button {
+	margin: 0;
+	padding: 0;
+	background: center/44rpx 44rpx url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAsCAMAAAAkRNp0AAAAP1BMVEUAAADj2tDj2tDf08/j18/j2tDj2dDi2c/k2tDn18/f18/f28/j2tDz8/Py8e/w7uvq5N7n4Nns5+Lt6ubt6eYEtNyUAAAADHRSTlMAkM8QQN/foJ8gIEDanayiAAAA0UlEQVQ4y73Vyw4CIQwF0ILztrTA+P/fqjM4wYSEXhPjXbA6gbYLSkfubuJO/LJSyc2xGXc7pWcg/rCOoTiijcEMNKPUkUfpSAznr1SDRIym8IqC9MyOFJCLlYS0tZ9WDRpFzxOgV5lR1ai1PC3ZHlYM74hJJVx5GDQGmEqlRgF7ldmgVYoxAa009mlsLm1p21Pq0/w5qD4NNdynqR2UfauwRbUZlNmWsknT9bxFSwWSE/ZlpB99RCMqPTmULjSgdMXXxjfLCF9xJdvcvXlyw6GedFpVXMbUemUAAAAASUVORK5CYII=");
 }
 
 .hero-badge {
@@ -63,7 +91,7 @@
   width: 706rpx;
   height: 140rpx !important;
 	left: 50%;
-	bottom: -50rpx;
+	bottom: 0;
   transform: translateX(-50%);
 }
 
@@ -71,27 +99,48 @@
 	position: absolute;
 	width: 156rpx;
   height: 76rpx;
-  margin-left: 20rpx;
-  margin-top: -344rpx;
+	margin-left: 20rpx;
+	bottom: 244rpx;
 }
 
 .badge-avatars {
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
-	bottom: 0rpx;
+	bottom: 52rpx;
 	display: flex;
   gap: 150rpx;
 	align-items: center;
 }
 
+.avatar-wrapper {
+	position: relative;
+}
+
 .avatar-item {
 	width: 160rpx;
 	height: 160rpx;
-  border-radius: 50%;
-  border: 1px solid;
-border-image-source: linear-gradient(180deg, #FFFFFF 0%, #D7CBCB 100%);
+	border-radius: 50%;
+	z-index: 2;
+	background: #D9F1FB;
+	border: 2rpx solid;
+	border-image-source: linear-gradient(180deg, #FFFFFF 0%, #D7CBCB 100%);
+	box-shadow: 0 2rpx 73rpx 0 #3F9FDF52 inset;
 }
+
+.avatar-item::before {
+	content: "";
+	width: 104rpx;
+	height: 20rpx;
+	position: absolute;
+	bottom: 0rpx;
+	left: 30rpx;
+	background: #C68724;
+	filter: blur(15rpx);
+	border-radius: 100%;
+	z-index: -1;
+}
+
 
 .my-actions {
   margin-top: 228rpx;
