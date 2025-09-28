@@ -15,7 +15,6 @@
   font-style: Regular;
   line-height: 140%;
   letter-spacing: 0.3px;
-  /* margin-left: 30rpx; */
 }
 
 .input-card {
@@ -67,9 +66,4 @@
 
 .confirm-btn[disabled] {
   opacity: 0.6;
-}
-
-.safe-bottom {
-  height: constant(safe-area-inset-bottom);
-  height: env(safe-area-inset-bottom);
 }

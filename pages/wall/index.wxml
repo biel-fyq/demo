@@ -1,5 +1,4 @@
 <view class="feedback-page">
-  <view class="safe-top-spacer"></view>
   <view class="content">
     <text class="label">写下你撞过的南墙</text>
     <view class="input-card">

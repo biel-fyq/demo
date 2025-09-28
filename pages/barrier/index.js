@@ -86,7 +86,7 @@ Page({
     // const { category } = e.currentTarget.dataset;
     // console.log('go to', category);
     // wx.navigateTo({ url: `/pages/detail/index?category=${encodeURIComponent(category)}` })
-    wx.navigateTo({ url: `/pages/detail/index` })
+    wx.navigateTo({ url: `/pages/write-name/index` })
   },
 
   navigateToWall() {
