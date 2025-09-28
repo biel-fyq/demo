@@ -1,5 +1,4 @@
 <view class="container">
-    <view class="safe-top-spacer"></view>
     <!-- 模糊背景层 -->
     <view class="background-blur"></view>
     <view class="frost-tint"></view>

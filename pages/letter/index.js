@@ -3,7 +3,6 @@ const app = getApp();
 Page({
   data: {
     StatusBar: app.globalData.StatusBar,
-
     sealPopupModal: false,
     showLetterListModal: false,
     days: 91,

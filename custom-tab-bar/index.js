@@ -14,11 +14,11 @@ Component({
     activeColor: '#1989fa',
     // 与 app.json 的 tabBar.list 完全一致（带前导 /）
     items: [
-      { pagePath: '/pages/home/index', text: '新生', iconPath: '/img/icon/1.png', selectedIconPath: '/img/icon/1.png' },
-      { pagePath: '/pages/barrier/index', text: '结界', iconPath: '/img/icon/2.png', selectedIconPath: '/img/icon/2.png' },
-      { pagePath: '/pages/letter/index', text: '信签', iconPath: '/img/icon/3.png', selectedIconPath: '/img/icon/3.png' },
-      { pagePath: '/pages/movie/index', text: '星火', iconPath: '/img/icon/4.png', selectedIconPath: '/img/icon/4.png' },
-      { pagePath: '/pages/my/index', text: '自我', iconPath: '/img/icon/5.png', selectedIconPath: '/img/icon/5.png' }
+      { pagePath: '/pages/home/index', text: '新生', iconPath:'https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250924/Group 1321315011_1758703383275.png', selectedIconPath: 'https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250924/Group 1321315011_1758703383275.png' },
+      { pagePath: '/pages/barrier/index', text: '结界', iconPath: 'https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250924/Group 1321314835_1758703395709.png', selectedIconPath: '/img/icon/2.pnghttps://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250924/Group 1321314835_1758703395709.png' },
+      { pagePath: '/pages/letter/index', text: '信签', iconPath: 'https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250924/Group 1321314837_1758703407817.png', selectedIconPath: 'https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250924/Group 1321314837_1758703407817.png' },
+      { pagePath: '/pages/movie/index', text: '星火', iconPath: 'https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250924/Group 1321314832_1758703419535.png', selectedIconPath: 'https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250924/Group 1321314832_1758703419535.png' },
+      { pagePath: '/pages/my/index', text: '自我', iconPath: 'https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250924/Group 1321314838_1758703432214.png', selectedIconPath: 'https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250924/Group 1321314838_1758703432214.png' }
     ]
   },
   methods: {
