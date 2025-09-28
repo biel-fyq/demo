@@ -1,5 +1,7 @@
+const app = getApp();
 Page({
     data: {
+        CustomBar: app.globalData.CustomBar,
         letterList: [
             {
                 date: '2025.6.7',

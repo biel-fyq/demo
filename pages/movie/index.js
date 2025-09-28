@@ -3,7 +3,7 @@ const app = getApp();
 Page({
   data: {
     StatusBar: app.globalData.StatusBar,
-
+    CustomBar: app.globalData.CustomBar,
     currentIndex: 1, // 默认中间那张是选中
     showBookModal: false,
     selectedBook: {},

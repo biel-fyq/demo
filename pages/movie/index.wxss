@@ -133,7 +133,6 @@
   box-sizing: border-box;
 }
 
-
 /* 书籍弹框样式 */
 .book-modal-mask {
   position: fixed;

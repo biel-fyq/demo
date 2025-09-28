@@ -1,10 +1,10 @@
-<view class="container">
+<view class="container" style="padding-top:{{CustomBar}}px;">
     <!-- 模糊背景层 -->
     <view class="background-blur"></view>
     <view class="frost-tint"></view>
     <!-- 页面内容 -->
     <view class="page-content">
-        <!-- 信件列表 -->
+        <!-- 信件列表 -->   
         <view class="letter-list-content">
             <block wx:for="{{letterList}}" wx:key="index">
                 <view class="letter-card">
