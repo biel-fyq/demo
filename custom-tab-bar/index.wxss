@@ -1,5 +1,4 @@
 
-/* 自定义 tabBar 根容器 */
 .menu-bar {
   position: fixed;
   left: 0;
@@ -9,7 +8,6 @@
   z-index: 100;
 }
 
-/* 内容容器 */
 .content {
   width: 100%;
   height: 124rpx;
@@ -17,7 +15,6 @@
   bottom: 0;
 }
 
-/* 背景图片 */
 .menu-bar-bg {
   width: 100%;
   height: 124rpx;
@@ -25,7 +22,6 @@
   object-fit: cover;
 }
 
-/* 图标容器 */
 .menu-icons-container {
   position: absolute;
   left: 0;
@@ -39,7 +35,6 @@
   align-items: center;
 }
 
-/* 图标包装器 */
 .menu-icon-wrapper {
   display: flex;
   flex-direction: column;
@@ -52,13 +47,11 @@
   margin-top: 30rpx;
 }
 
-/* 图标样式 */
 .menu-icon {
   width: 64rpx;
   height: 64rpx;
 }
 
-/* 标签包装器 */
 .menu-tag-wrapper {
   position: absolute;
   top: 0rpx;
@@ -69,13 +62,11 @@
   justify-content: center;
 }
 
-/* 标签背景 */
 .menu-tag {
   width: 60rpx;
   height: 48rpx;
 }
 
-/* 标签文字 */
 .menu-tag-text {
   position: absolute;
   top: 45%;
@@ -87,14 +78,10 @@
   text-align: center;
 }
 
-/* 安全区域适配 */
 .safe-area {
   width: 100%;
   background: #fff;
 }
-
-
-
 
 .tabbar {
   position: fixed;
