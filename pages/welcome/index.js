@@ -1,29 +1,20 @@
-// pages/welcome/index.js
 Page({
 
-  /**
-   * 页面的初始数据
-   */
   data: {
     hasUserInfo: true,
     showIconPage: true,
-    showWelcomePage: false,
+    showWelcomePage: true,
     showLoginPage: false,
     currentStep: 1 // 1: 图标页面, 2: 欢迎页面, 3: 隐藏, 4: 再次显示, 5: 隐藏, 6: 登录页面
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
+
   onLoad(options) {
     this.startPageSequence();
   },
 
-  /**
-   * 开始页面切换序列
-   */
+
   startPageSequence() {
-    // 第一步：显示图标页面2秒
     this.setData({
       showIconPage: true,
       showWelcomePage: false,
@@ -39,21 +30,13 @@ Page({
         currentStep: 2
       });
 
-      // 2秒后隐藏欢迎页面
+      // 2秒后切换到登录页面（去掉中间空白等待）
       setTimeout(() => {
         this.setData({
           showWelcomePage: false,
-          currentStep: 4
+          showLoginPage: true,
+          currentStep: 6
         });
-
-        setTimeout(() => {
-          setTimeout(() => {
-            this.setData({
-              showLoginPage: true,
-              currentStep: 6
-            });
-          }, 500); // 短暂延迟后显示登录页面
-        }, 500); // 隐藏1秒后再次显示
 
       }, 2000); // 显示2秒
 

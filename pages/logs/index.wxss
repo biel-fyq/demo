@@ -32,11 +32,6 @@ page {
   width: 100%;
   z-index: 5;
   position: relative;
-  
-}
-.welcome-page-bag {
-  /* width: 622rpx;
-  height: 268rpx; */
 }
 
 .fog-cloud {

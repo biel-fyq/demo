@@ -1,7 +1,5 @@
 <view class="welcome-page">
 <view>
-</view>
-<view>
 <!-- <image src="/img/welcome.png" class="welcome-page-bag"></image> -->
 </view>
   <view class="fog-background">

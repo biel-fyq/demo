@@ -12,7 +12,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* 关键：图片居中 */
   width: 268rpx;
   height: 268rpx;
 }
@@ -208,32 +207,15 @@
   padding: 0;
 }
 
-/* 
-  .welcome-container-img1 {
-      width: 222rpx;
-      height: 222rpx;
-  }
-  .welcome-container-img2 {
-    width: 222rpx;
-    height: 222rpx;
-}
-.welcome-container-img3 {
-    width: 268rpx;
-    height: 268rpx;
-} */
 
-/* 页面整体容器 */
 .login-page {
   width: 100%;
   height: 100vh;
-  /* 占满屏幕高度 */
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* 垂直居中 */
   align-items: center;
-  /* 水平居中 */
   overflow: hidden;
 }
 
@@ -277,15 +259,7 @@
   z-index: 2;
 }
 
-/* 保留你原来的 logo-image 类（可用于统一管理或动画） */
-.logo-image {
-  /* 你可以在这里添加额外的样式，比如动画 */
-  /* animation: logoFadeIn 1s ease-in-out;s */
-}
-
-
 .welcome-text-login {
-  /* margin-bottom: 120rpx; */
   margin-bottom: 128rpx;
   text-align: center;
   animation: welcomeTextFadeIn 1s ease-in-out 0.6s both;
@@ -303,11 +277,9 @@
   text-align: center;
 }
 
-/* 欢迎文字区域 */
 .welcome-text {
   margin-bottom: 120rpx;
   text-align: center;
-  /* animation: welcomeTextFadeIn 1s ease-in-out 0.6s both; */
 }
 
 .welcome-title {
@@ -397,6 +369,21 @@
   }
 }
 
+/* 图片渐入动画 */
+@keyframes imageFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* 图片渐入动画类 */
+.fade-in-image {
+  animation: imageFadeIn 1.5s ease-in-out;
+}
+
 @keyframes welcomeTextFadeIn {
   0% {
     opacity: 0;
@@ -439,6 +426,16 @@ page {
   background: #ffffff;
 }
 
+/* 通用页面淡入动画 */
+.page-fade-in {
+  animation: pageFadeIn 400ms ease;
+}
+
+@keyframes pageFadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 .welcome-page {
   width: 100%;
   height: 100vh;
@@ -451,14 +448,13 @@ page {
 
 .fog-background {
   position: absolute;
-  top: 120rpx;
+  top: 200rpx;
   left: 0;
   display: flex;
   width: 100%;
   height: 200rpx;
   z-index: 0;
 }
-
 .main-content {
   display: flex;
   flex-direction: column;
@@ -473,6 +469,7 @@ page {
   height: 100%;
   z-index: 0;
 }
+
 
 .fog-left {
   flex: 1;
@@ -513,9 +510,12 @@ page {
 
 .welcome-text {
   text-align: center;
-  transform: rotate(-8deg);
+  transform: rotate(-14deg);
   margin-bottom: 100rpx;
   width: 80%;
+  /* background: url('https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250926/welcome_1758882191799.png');
+  background-size: cover;
+  background-position: center 20%; */
 }
 
 .welcome-title {
