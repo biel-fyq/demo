@@ -11,7 +11,7 @@ Page({
     },
   
     onLoad(options) {
-      const articleId = options.id || 1  // 从路由参数拿文章 id
+      const articleId = options.id || 1 
       this.fetchArticle(articleId)
     },
   
@@ -37,11 +37,9 @@ Page({
     },
     prevChapter() {
       wx.showToast({ title: '上一章', icon: 'none' })
-      // 这里可以调用 this.fetchArticle(id - 1)
     },
     nextChapter() {
       wx.showToast({ title: '下一章', icon: 'none' })
-      // 这里可以调用 this.fetchArticle(id + 1)
     }
   })
   

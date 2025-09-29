@@ -4,7 +4,6 @@
   background-color: #F8F8F8;
 }
 
-/* 书籍展示区 */
 .book-section {
   display: flex;
   margin-bottom: 64rpx;
