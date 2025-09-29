@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/home/index",
     "pages/welcome/index",
+    "pages/home/index",
     "pages/barrier/index",
     "pages/my/index",
     "pages/movie/index",

@@ -33,9 +33,9 @@ Page({
     })
   },
   submit(){
-    wx.navigateTo({
-      url: "/pages/rescue/index",
-    });
+    wx.switchTab({
+      url: "/pages/home/index",
+    })
   },
  
   getUserProfile(e) {
