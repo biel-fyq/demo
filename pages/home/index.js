@@ -6,6 +6,7 @@ Page({
 
     showWateringCan: false,
     showPopup: false,
+    showMedal: false,
     progress: 30,
     showCalendar: false,
     calendarTitle: '',
@@ -21,6 +22,13 @@ Page({
       "https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250924/6_1758713088283.png",
       "https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250924/7_1758713129426.png"
     ]
+  },
+  // ===== 勋章弹框 =====
+  showMedalPopup() {
+    this.setData({ showMedal: true });
+  },
+  hideMedal() {
+    this.setData({ showMedal: false });
   },
   waterPlant() {
     this.setData({ showWateringCan: true })

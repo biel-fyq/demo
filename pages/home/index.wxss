@@ -204,6 +204,75 @@ page {
   z-index: 10000;
 }
 
+/* 勋章弹框：垂直居中展示 */
+.medal-popup {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 86vw;
+  max-width: 640rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24rpx;
+  z-index: 10001;
+}
+
+.medal-title {
+  width: 524rpx;
+  height: 134rpx;
+}
+
+.medal-figure {
+  width: 480rpx;
+  height: 640rpx;
+}
+
+.medal-text {
+  font-family: ZCOOL KuaiLe;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 32rpx;
+  line-height: 140%;
+  letter-spacing: 0.3px;
+  color: #FFFFFF;
+}
+
+.medal-date {
+  font-family: ZCOOL KuaiLe;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 24rpx;
+  line-height: 140%;
+  letter-spacing: 0.3px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.medal-confirm-btn {
+  width: 320rpx !important;
+  height: 110rpx;
+  background: #f7c52b;
+  border-radius: 80rpx;
+  border: 4rpx solid #000000;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40rpx;
+  font-weight: 500;
+  color: #000;
+  margin-top: 40rpx;
+  font-family: ZCOOL KuaiLe;
+  font-weight: 400;
+  font-style: Regular;
+  line-height: 140%;
+  letter-spacing: 0.6rpx;
+  vertical-align: middle;
+
+}
+
 .popup {
   position: fixed;
   left: 50%;
@@ -357,13 +426,13 @@ text.calendar-nowday {
 .calendar-day.group-c,
 .calendar-day.group-d,
 .calendar-day.group-e {
-  background-image: linear-gradient(#FAE768 0%,#FFF1B5 100%);
+  background-image: linear-gradient(#FAE768 0%, #FFF1B5 100%);
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 
 .calendar-day.single {
-  background-image: linear-gradient(#FAE768 0%,#FFF1B5 100%);
+  background-image: linear-gradient(#FAE768 0%, #FFF1B5 100%);
 }
 
 

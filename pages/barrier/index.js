@@ -15,7 +15,8 @@ Page({
       { title: '旅途拾珍', subtitle: '记录行旅见闻与地域文化', icon: '/img/16.png' },
       { title: '闲情偶寄', subtitle: '展现莳花弄草等文人雅趣', icon: '/img/16.png' },
       { title: '浮生杂忆', subtitle: '探讨生命哲学与处世智慧', icon: '/img/16.png' }
-    ]
+    ],
+    showWallText: false
   },
 
 
@@ -48,7 +49,7 @@ Page({
 
   },
 
-  
+
   onPullDownRefresh() {
 
   },
@@ -58,7 +59,7 @@ Page({
 
   },
 
- 
+
   onShareAppMessage() {
 
   }
@@ -69,6 +70,13 @@ Page({
 
   navigateToWall() {
     wx.navigateTo({ url: `/pages/wall/index` })
+  },
+
+  toggleWallText() {
+    console.log(11111);
+    this.setData({
+      showWallText: !this.data.showWallText
+    })
   },
 
   switchTab(e) {
