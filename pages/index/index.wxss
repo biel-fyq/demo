@@ -1,16 +1,14 @@
-/* 整体容器 */
 .login-container {
   width: 100vw;
-  height: 90vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* 垂直居中 */
-  align-items: center; /* 水平居中 */
+  justify-content: center; 
+  align-items: center;
   background-color: #F8F8F8;
 }
 
 
-/* 表单容器 */
 .form-container {
   width: 80%;
   max-width: 300px;
@@ -19,7 +17,6 @@
   align-items: center;
 }
 
-/* 用户信息区域 */
 .userinfo {
   display: flex;
   flex-direction: column;
@@ -27,7 +24,6 @@
   width: 100%;
 }
 
-/* 头像样式 */
 .userinfo-avatar {
   overflow: hidden;
   width: 128rpx;
@@ -50,7 +46,6 @@
   height: 56px;
 }
 
-/* 昵称输入区域 */
 .nickname-wrapper {
   display: flex;
   width: 100%;
