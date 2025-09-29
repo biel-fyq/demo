@@ -15,12 +15,3 @@
   </view>
   <view class="safe-area" style="height: {{safeBottomRpx}}rpx;"></view>
 </view>
-
-<!-- <view class="tabbar">
-    <block wx:for="{{list}}" wx:key="index">
-        <view class="tab-item" data-index="{{index}}" bindtap="onChange">
-            <image class="icon" src="{{selected === index ? item.selectedIconPath : item.iconPath}}" mode="aspectFit" />
-            <text>{{selected === index ? item.text : ''}}</text>
-        </view>
-    </block>
-</view> -->
