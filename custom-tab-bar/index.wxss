@@ -94,7 +94,7 @@
   height: 136rpx;
   background: url("https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250926/Mask group_1758872172406.png");
   background-size: 750rpx 222rpx;
-  z-index: 500;
+  z-index: 1;
 }
 .tab-item {
   flex: 1;
