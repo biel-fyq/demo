@@ -1,5 +1,9 @@
+page{
+  background: #F8F8F8;
+}
 .movie-body {
   width: 94vw;
+  height: 140vh;
   margin: 0 auto;
 }
 
@@ -15,6 +19,7 @@
 .moviePillContainer.compact .pillImage {
   margin-top: -36rpx;
 }
+
 
 .movieTitle {
   font-family: ZCOOL KuaiLe;
