@@ -45,34 +45,37 @@
         </view>
       </view>
       <!-- 日历弹框 -->
-      <view wx:if="{{showCalendar}}">
-        <view class="popup-mask" bindtap="hideCalendar"></view>
-        <view class="calendar-popup">
+      <view style="padding-top:{{StatusBar + 40}}px;" wx:if="{{showCalendar}}">
+        <view class="popup-mask" bindtap="hideMedal"></view>
+        <view class="calendar-container">
+          <!-- 日历背景图 -->
           <view class="calendar-bg">
-            <image class="calendar-bg-image" src="https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250924/%E6%97%A5%E5%8E%86_1758713530166.png" mode="widthFix" />
+            <image src="https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250924/%E6%97%A5%E5%8E%86_1758713530166.png" mode="widthFix" class="calendar-bg-image" />
           </view>
+          <!-- 日历内容 -->
           <view class="calendar-content">
-            <!-- <view class="calendar-header">{{calendarTitle}}</view> -->
+            <!-- 月份标题 -->
+            <!-- 星期标题 -->
             <view class="calendar-week">
-              <block wx:for="{{weekTitles}}" wx:key="idx">
-                <view class="calendar-week-item">{{item}}</view>
-              </block>
+              <view wx:for="{{weekTitles}}" wx:key="idx" class="week-item">{{item}}</view>
             </view>
+            <!-- 日期网格 -->
             <view class="calendar-grid">
-              <block wx:for="{{calendarGrid}}" wx:key="index">
-                <view class="calendar-cell {{item.type}}" data-index="{{index}}">
-                  <view wx:if="{{item.type==='day'}}" class="calendar-day {{item.groupClass}} {{item.checked? 'checked' : ''}} {{item.isToday? 'today' : ''}}">
-                    <text class="{{item.isToday ? 'calendar-nowday' : ''}}">
+              <view wx:for="{{calendarGrid}}" wx:key="index" class="calendar-cell {{item.type}}">
+                <view wx:if="{{item.type==='day'}}" class="calendar-day-wrapper {{item.isConsecutive? 'consecutive-wrapper' : ''}} {{item.isStart? 'consecutive-start' : ''}} {{item.isEnd? 'consecutive-end' : ''}} {{item.isMid? 'consecutive-mid' : ''}}">
+                  <view class="calendar-day {{item.checked? 'checked' : ''}} {{item.isToday? 'today' : ''}}">
+                    <text class="{{item.isToday ? 'today-text' : ''}}">
                       {{item.isToday?'今':item.day}}
                     </text>
                     <view wx:if="{{item.checked}}" class="calendar-tick">✓</view>
                   </view>
                 </view>
-              </block>
+              </view>
             </view>
-            <view class="calendar-actions">
-              <image src="/img/error.png" class="calendar-btn" bindtap="hideCalendar"></image>
-            </view>
+          </view>
+          <!-- 关闭按钮 -->
+          <view class="calendar-actions" bindtap="hideCalendar">
+            <image src="/img/error.png" class="calendar-btn"></image>
           </view>
         </view>
       </view>
@@ -80,8 +83,8 @@
       <view wx:if="{{false}}">
         <view class="popup-mask" bindtap="hideMedal"></view>
         <view class="medal-popup">
-          <image class="medal-title" src="/img/37.png" mode="widthFix" />
-          <image class="medal-figure" src="/img/38.png" mode="widthFix" />
+          <image class="medal-title" src="https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250930/37_1759210273912.png" mode="widthFix" />
+          <image class="medal-figure" src="https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250930/30_1759211620036.png" mode="widthFix" />
           <view class="medal-text">连续登陆21天可以获得</view>
           <view class="medal-date">日期：2025.5.6</view>
           <button class="medal-confirm-btn" bindtap="hideMedal">炫耀一下</button>

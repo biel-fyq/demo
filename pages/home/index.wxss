@@ -225,8 +225,7 @@ page {
 }
 
 .medal-figure {
-  width: 480rpx;
-  height: 640rpx;
+  width: 750rpx;
 }
 
 .medal-text {
@@ -285,189 +284,170 @@ page {
   padding: 0 0 32rpx 0;
 }
 
-/* 日历弹框 */
-.calendar-popup {
-  position: fixed;
-  left: 50%;
-  top: 10vh;
-  transform: translateX(-50%);
-  width: 88vw;
-  max-width: 640rpx;
-  z-index: 10000;
-}
-
-.calendar-bg {
+.calendar-container {
   position: relative;
-}
-
-.calendar-bg-image {
-  position: absolute;
-  top: -12rpx;
-  left: 50%;
-  transform: translateX(-50%) scale(1.08);
-  width: 110%;
-  height: auto;
-  display: block;
-}
-
-.calendar-content {
-  position: absolute;
-  inset: 0;
-  padding: 60rpx 24rpx 20rpx;
-}
-
-.calendar-header {
-  text-align: center;
-  font-size: 32rpx;
-  font-weight: 700;
-  color: #000;
-  margin-bottom: 8rpx;
-}
-
-.calendar-week {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 10rpx;
-  margin-bottom: 6rpx;
-}
-
-.calendar-week-item {
-  text-align: center;
-  font-size: 22rpx;
-  color: #222;
-}
-
-.calendar-grid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 12rpx 14rpx;
-  /* 列间距 14rpx，用负 margin 精准抵消 */
-  padding: 4rpx 10rpx;
-}
-
-.calendar-cell {
-  height: 68rpx;
-  position: relative;
-}
-
-.calendar-day {
-  height: 100%;
-  border-radius: 20rpx;
+  width: 100vw;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  position: relative;
+  box-sizing: border-box;
+  z-index: 100000;
 }
-
-.calendar-day text {
-  font-size: 24rpx;
-  color: #000;
-  font-weight: 700;
-}
-
-/* 今天的日期文字样式 - 使用更高优先级的选择器 */
-.calendar-day text.calendar-nowday,
-.calendar-day .calendar-nowday,
-text.calendar-nowday {
-  color: #E04E47 !important;
-  font-size: 24rpx;
-  font-weight: 700;
-}
-
-.calendar-tick {
-  position: absolute;
-  right: 35rpx;
-  bottom: 4rpx;
-  font-size: 20rpx;
-  color: #E04E47;
-}
-
-/* 所有选中日期的勾勾都水平居中 */
-.calendar-day.checked .calendar-tick {
-  right: 50%;
-  transform: translateX(50%);
-}
-
-/* 被选中的日期基础样式 */
-.checked {
-  border: 2rpx solid #ffcc66;
-  border-radius: 14rpx;
-  background-color: #fff;
-  box-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.1);
-}
-
-/* 分组背景色定义 */
-
-/* 所有选中的日期都保持独立样式 */
-.calendar-day.group-a,
-.calendar-day.group-b,
-.calendar-day.group-c,
-.calendar-day.group-d,
-.calendar-day.group-e,
-.calendar-day.single {
-  border-radius: 14rpx;
-  border: 2rpx solid #ffcc66;
-  box-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.1);
-}
-
-/* 组内元素样式调整 - 让背景色显示 */
-.calendar-day.group-a.checked,
-.calendar-day.group-b.checked,
-.calendar-day.group-c.checked,
-.calendar-day.group-d.checked,
-.calendar-day.group-e.checked {
-  box-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.1);
-  background-color: transparent;
-}
-
-/* 所有分组使用相同的背景色 */
-.calendar-day.group-a,
-.calendar-day.group-b,
-.calendar-day.group-c,
-.calendar-day.group-d,
-.calendar-day.group-e {
-  background-image: linear-gradient(#FAE768 0%, #FFF1B5 100%);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-}
-
-.calendar-day.single {
-  background-image: linear-gradient(#FAE768 0%, #FFF1B5 100%);
-}
-
-
-.today {
-  border: 4rpx solid #E04E47;
-  border-radius: 25rpx;
-}
-
-.calendar-today-flag {
-  position: absolute;
-  left: 6rpx;
-  bottom: 4rpx;
-  width: 30rpx;
-  height: 30rpx;
-  border: 3rpx solid #E04E47;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18rpx;
-  color: #E04E47;
-  background: #fff;
-}
-
 .calendar-actions {
-  margin-top: 20rpx;
-  display: flex;
-  justify-content: center;
+  z-index: 100000;
 }
 
 .calendar-btn {
   width: 64rpx;
   height: 64rpx;
-  margin-top: 40rpx;
+  margin-top: 0rpx;
 }
+
+.calendar-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.calendar-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.calendar-content {
+  position: relative;
+  z-index: 2;
+  width: 80vw;
+  padding: 100rpx 20rpx 60rpx 20rpx;
+}
+
+
+.calendar-week {
+  display: flex;
+}
+
+.week-item {
+  flex: 1;
+  text-align: center;
+  font-size: 28rpx;
+  font-weight: 500;
+}
+
+.calendar-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.calendar-cell {
+  width: calc(100% / 7);
+  height:80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.calendar-day-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.calendar-day {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-size: 28rpx;
+  color: #000;
+  z-index: 2;
+  line-height: 10rpx;
+}
+
+/* 今天样式 - 红色边框 */
+.calendar-day.today {
+  border: 4rpx solid #E04E47;
+  background-image: linear-gradient(#FAE768 0%, #FFF1B5 100%);
+}
+
+.today-text {
+  color: #E04E47;
+  font-weight: bold;
+}
+
+/* 已勾选样式 - 黄色背景 */
+.calendar-day.checked {
+  background-image: linear-gradient(#FAE768 0%, #FFF1B5 100%);
+}
+
+/* 连续日期样式 - 整体背景色 */
+.consecutive-wrapper {
+  position: relative;
+}
+
+.consecutive-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 70rpx;
+  background: #F9F4B3;
+  transform: translateY(-50%);
+  z-index: 1;
+  border-radius: 10rpx;
+}
+
+/* 开始日期 - 左圆角 */
+.consecutive-wrapper.consecutive-start::before {
+  border-top-left-radius: 10rpx;
+  border-bottom-left-radius: 10rpx;
+}
+
+/* 中间日期 - 无圆角，完全连接 */
+.consecutive-wrapper.consecutive-mid::before {
+  border-radius: 0;
+}
+
+/* 结束日期 - 右圆角 */
+.consecutive-wrapper.consecutive-end::before {
+  border-top-right-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
+}
+
+/* 单个连续日期 - 完全圆角 */
+.consecutive-wrapper:not(.consecutive-start):not(.consecutive-end):not(.consecutive-mid)::before {
+  border-radius: 10rpx;
+}
+
+/* 勾选标记 */
+.calendar-tick {
+  position: absolute;
+  bottom: -2rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16rpx;
+  height: 16rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18rpx;
+  color: #E04E47;
+  font-weight: bold;
+  z-index: 10;
+
+}
+
 
 .popup-header {
   position: absolute;

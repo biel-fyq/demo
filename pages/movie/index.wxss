@@ -25,7 +25,7 @@ page{
   font-family: ZCOOL KuaiLe;
   font-weight: 400;
   font-style: Regular;
-  font-size: 40rpx;
+  font-size: 36rpx;
   line-height: 100%;
   letter-spacing: 0%;
   margin-top: 56rpx;
@@ -34,7 +34,7 @@ page{
 }
 
 .pillImage {
-  width: 160rpx;
+  width: 140rpx;
   height: 130rpx;
   margin-top: -50rpx;
   margin-left: 38rpx;
