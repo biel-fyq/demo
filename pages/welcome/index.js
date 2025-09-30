@@ -1,6 +1,8 @@
+const app = getApp();
 Page({
 
   data: {
+    CustomBar: app.globalData.CustomBar,
     hasUserInfo: true,
     showIconPage: true,
     showWelcomePage: true,

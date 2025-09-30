@@ -374,6 +374,7 @@
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -432,8 +433,13 @@ page {
 }
 
 @keyframes pageFadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .welcome-page {
@@ -448,13 +454,14 @@ page {
 
 .fog-background {
   position: absolute;
-  top: 200rpx;
+  top: 300rpx;
   left: 0;
   display: flex;
   width: 100%;
   height: 200rpx;
   z-index: 0;
 }
+
 .main-content {
   display: flex;
   flex-direction: column;
@@ -563,9 +570,8 @@ page {
 .inspirational-text {
   text-align: center;
   transform: rotate(-15deg);
-  margin-bottom: 120rpx;
   width: 80%;
-  margin-top: 100rpx;
+  margin-top: 120rpx;
 }
 
 .inspirational-text text {
@@ -578,12 +584,64 @@ page {
 }
 
 .bottom-illustration {
-  width: 466rpx;
+  width: 566rpx;
   height: 332rpx;
-  object-fit: contain;
-  margin-top: 40rpx;
 }
 
 .inspirational-text {
   font-size: 36rpx;
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.page-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f8f8;
+}
+
+.content {
+  flex: 1;
+  padding: 40rpx;
+  overflow-y: auto;
+  margin-top: 100rpx;
+}
+
+.title {
+  font-size: 36rpx;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 20rpx;
+}
+
+.desc {
+  font-size: 28rpx;
+  color: #666;
+  display: block;
+  margin-bottom: 40rpx;
+}
+
+.content-item {
+  background: white;
+  margin-bottom: 20rpx;
+  padding: 30rpx;
+  border-radius: 12rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.1);
+}
+
+.fixed-bottom {
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: flex-start; /* 垂直方向顶部对齐 */
+  padding: 200rpx;
+}
+
+.bottom-text {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.bottom-btn {
+  margin-left: 20rpx;
 }

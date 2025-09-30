@@ -12,11 +12,11 @@
         <view class="content-item">
           <view wx:if="{{currentTab == 0}}" class="animated-content" style="animation: rotateIn 400ms ease-out forwards;">
             <view class="barrier-content">
-              <view class="barrier-content-bag-container">
+              <view class="barrier-content-bag-container" bindtap="toggleTags">
                 <text class="barrier-content-bag-title">雪山下的老黑</text>
                 <image src="https://yinyan-mini.cn-heyuan.oss.aliyuncs.com/20250922/Mask group_1758545972700.png" mode="widthFix" class="barrier-content-bag" />
               </view>
-              <view class="list-center-overlay">
+              <view class="list-center-overlay" wx:if="{{showTags}}">
                 <view wx:for="{{tags}}" wx:key="index" class="tag-item">
                   <text class="tag-text">{{item}}</text>
                 </view>

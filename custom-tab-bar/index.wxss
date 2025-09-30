@@ -48,8 +48,8 @@
 }
 
 .menu-icon {
-  width: 64rpx;
-  height: 64rpx;
+  width: 55rpx;
+  height: 55rpx;
 }
 
 .menu-tag-wrapper {
